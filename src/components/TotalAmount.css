@@ -1,0 +1,75 @@
+.mainamount-div {
+    width: 360px;
+    height: auto; /* 높이를 자동으로 조정 */
+    border: 1px solid #E6E7EA;
+    border-right: none; 
+    border-bottom: none;
+    padding: 16px; 
+    box-sizing: border-box;
+    margin: auto;
+  }
+  
+  .alltotal-div {
+    width: 300px;
+    margin: auto;
+  }
+  
+  .amount-div {
+    color: #6B7283;
+    list-style: none;
+    margin-bottom: 5px;
+    font-size: 12px;
+    display: flex;               
+    justify-content: space-between;  
+    align-items: center; 
+    width: 100%; /* 폭을 100%로 설정 */
+  }
+  
+  .total-amount {
+    font-size: 1.1rem;
+    color: #000
+  }
+  
+  .total-hr {
+    width: 100%; /* 폭을 100%로 설정 */
+    border : 0px;
+    border-top: dashed #6B7283;
+  }
+  
+  .total-div{
+    display: flex;
+    justify-content: space-between;  
+    align-items: center; 
+    width: 100%; /* 폭을 100%로 설정 */
+    box-sizing: border-box;
+    margin-top: 10px;
+  }
+  
+  .total{
+    font-size: 24px;
+    list-style: none;
+    font-weight: 600;
+  }
+  
+  .totalmoney {
+    list-style: none;
+    font-size: 22px;
+    font-weight: 500;
+    align-items: center;
+    color: #01703C;
+  }
+  
+  .start-button {
+    margin: auto;
+    width: 290px; /* 폭을 100%로 설정 */
+    height: 36px;
+    border-radius: 60px;
+    border: none;
+    background-color: #9022FF;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+    margin-top: 15px;
+  }

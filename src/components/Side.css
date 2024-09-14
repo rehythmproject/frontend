@@ -1,0 +1,9 @@
+.appdiv{
+    margin-top: 78px;
+    width: 360px;
+    height: 800px;
+    position: fixed; 
+    z-index: 1;
+    right: 0;
+    background-color: white;
+}

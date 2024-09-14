@@ -1,0 +1,32 @@
+.recent_item{
+    padding: 15px;
+    width: 190px;
+    height: 100px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 20px 2px #efefef;
+    background-color: white;
+}
+
+.title {
+    display: flex;
+    height: 20px;
+    margin-bottom: 10px;
+}
+
+.model_code {
+    padding-top: 0;
+    color: #969BA7;
+    font-size: 13px;
+    margin-left: 100px;
+}
+
+.tag{
+    border-radius: 20px;
+    background-color: #FEEEEC;
+    color: #943228;
+    width: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px;
+    padding-left: 10px;
+}

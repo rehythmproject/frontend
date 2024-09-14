@@ -1,0 +1,19 @@
+
+  .change-maindiv {
+    display: flex;
+    justify-content: space-between;
+    background-color: #F3F3F3;
+    border-radius: 40px;
+    width: 316px;
+    margin: auto;
+  }
+  
+  .change-button {
+    width: 158px;
+    height: 30px;
+    border-radius: 12px;
+    background-color: #F3F3F3;
+    color: #6B7283;
+    font-size: 12px;
+    border: 2px solid #F3F3F3;
+  }
