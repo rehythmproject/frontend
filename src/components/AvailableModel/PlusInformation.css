@@ -27,10 +27,11 @@
   .write-button {
     position: absolute;
     width: 16px;
-    top: 8px; /* 버튼 위치 조정 */
-    right: 30px;
+    top: 8px; 
+    right: 20px;
     background: transparent; /* 배경 투명 */
     border: none;
+    cursor: pointer;
   }
   
   .add-button{
@@ -41,7 +42,8 @@
     background-color: #F4E9FF;
     border-radius: 60px;
     border: none;
-    margin-top: 0px; /* 여백 추가 */
+    margin-top: 0px; 
+    cursor: pointer;
   }
   
   .add-div{
@@ -51,8 +53,8 @@
     background-color: #F4E9FF;
   }
   
-  .Add-span{
+  .add-div span{
     background-color: #F4E9FF;
     height: 20px;
-    margin-left: 5px; /* 텍스트 여백 추가 */
+    margin-left: 5px; 
   }

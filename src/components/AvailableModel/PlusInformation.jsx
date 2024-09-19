@@ -13,7 +13,7 @@ const PlusInformation = () => {
         <button className="add-button">
           <div className='add-div'>
             <img src="./images/pencil-square.png" alt="편집" style={{background:'none', width:'17px'}}/>
-            <span className='Add-span'> Add Note</span>
+            <span> 정보 저장 </span>
           </div>
         </button>
       </div>      
