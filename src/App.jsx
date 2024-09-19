@@ -1,6 +1,5 @@
 import Header from './components/Header';
-import Main from './components/Main';
-import Side from './components/Side'
+import AvailableModel from './components/AvailableModel/AvailableModel';
 import './App.css';
 
 function App() {
@@ -8,8 +7,7 @@ function App() {
     <div className="App">
       <Header/>
       <div className='app_compo_container'>
-        <Main/>
-        <Side/>
+        <AvailableModel />
       </div>
     </div>
   );
