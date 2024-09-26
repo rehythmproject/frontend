@@ -28,6 +28,11 @@ const TotalAmount = () => {
     setOrderPayment(false); 
   };
 
+  const closePaymentCompleted = () => {
+    setOrderPayment(false); 
+    setIsPaymentCompleted(false);
+  }
+
   const handleRetryPayment = () => {
     openPayment(); 
   };
@@ -88,7 +93,7 @@ const TotalAmount = () => {
     {isPaymentCompleted && 
       <PaymentCompleted 
         onRetry={handleRetryPayment}
-        closePayment={closePayment} 
+        closePaymentCompleted={closePaymentCompleted} 
       />}
     </div>
   );

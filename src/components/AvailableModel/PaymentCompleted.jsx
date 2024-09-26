@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './PaymentCompleted.css';
 
-const PaymentCompleted = ({ onRetry, closePayment }) => {
+const PaymentCompleted = ({ onRetry, closePaymentCompleted }) => {
   // 결제 상태를 관리하는 상태 변수
   const [paymentStatus, setPaymentStatus] = useState('success'); // failure success
 
@@ -14,7 +14,7 @@ const PaymentCompleted = ({ onRetry, closePayment }) => {
   }, []);
 
   const handlePaymentCompletedClick = () => {
-    closePayment();
+    closePaymentCompleted();
   }
 
   return (
