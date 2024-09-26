@@ -10,8 +10,8 @@ const PaymentMethod = ({ closePayment, setIsPaymentCompleted }) => {
   };
 
   const handlePaymentClick = () => {
-    setIsPaymentCompleted(true); // 결제 완료 상태로 변경
-    closePayment(); // 결제 창 닫기
+    setIsPaymentCompleted(true); 
+    closePayment(); 
   };
 
   return (
