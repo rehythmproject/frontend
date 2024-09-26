@@ -7,31 +7,29 @@ const TotalAmount = () => {
   const [orderPayment, setOrderPayment] = useState(false);
   const [isPaymentCompleted, setIsPaymentCompleted] = useState(false);
 
-  // 결제 창이 열리면 스크롤을 막고, 닫히면 스크롤을 허용
   useEffect(() => {
     if (orderPayment) {
-      document.body.style.overflow = 'hidden'; // 스크롤 비활성화
+      document.body.style.overflow = 'hidden'; 
     } else {
-      document.body.style.overflow = 'auto'; // 스크롤 활성화
+      document.body.style.overflow = 'auto'; 
     }
     
-    // 컴포넌트 언마운트 시 스크롤을 다시 활성화
     return () => {
       document.body.style.overflow = 'auto';
     };
   }, [orderPayment]);
 
   const openPayment = () => {
-    setOrderPayment(true);  // 결제 창 열기
-    setIsPaymentCompleted(false); // 결제 완료 상태 초기화
+    setOrderPayment(true);  
+    setIsPaymentCompleted(false); 
   };
 
   const closePayment = () => {
-    setOrderPayment(false); // 결제 창 닫기
+    setOrderPayment(false); 
   };
 
   const handleRetryPayment = () => {
-    openPayment(); // 결제 화면 다시 열기
+    openPayment(); 
   };
 
   return (
@@ -87,7 +85,11 @@ const TotalAmount = () => {
         </div>
       )}
 
-      {isPaymentCompleted && <PaymentCompleted onRetry={handleRetryPayment} />}
+    {isPaymentCompleted && 
+      <PaymentCompleted 
+        onRetry={handleRetryPayment}
+        closePayment={closePayment} 
+      />}
     </div>
   );
 };

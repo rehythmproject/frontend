@@ -11,7 +11,7 @@
   z-index: 1000;
 }
 
-.payment-completed-container {
+.payment-completed-container1 {
   background-color: white;
   padding: 30px;
   border-radius: 12px;
@@ -19,12 +19,20 @@
   height: 18rem;
 }
 
+.payment-completed-container2 {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 31.5rem; 
+  height: 22rem;
+}
+
 .payment-message {
   display: flex;
   margin-bottom: 20px;
 }
 
-.circle-icon {
+.circle-icon1 {
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -33,6 +41,18 @@
   align-items: center;
   justify-content: center;
   border: 12px solid #fef6f5;
+  margin-right: -10px;
+}
+
+.circle-icon2 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #F4E9FF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 12px solid #F5F8FF;
   margin-right: -10px;
 }
 
@@ -47,11 +67,19 @@
 
 h5 {
   margin: 0 0 0 2rem;
+  font-size: 1.7rem;
 }
 
-.amount {
+.amount1 {
   font-size: 1.7rem;
   color: #AA392E;
+  font-weight: 500;
+  margin: 0 0 0 2rem;
+}
+
+.amount2 {
+  font-size: 1.7rem;
+  color: #9022FF;
   font-weight: 500;
   margin: 0 0 0 2rem;
 }
@@ -60,6 +88,16 @@ h5 {
   margin: 10px 0; 
   color: #6B7283;
   line-height: 1.5; 
+}
+
+.success-message {
+  margin: 10px 0; 
+  color: #6B7283;
+  line-height: 1.5; 
+}
+
+.payment-img {
+  height: 1.6rem;
 }
 
 .payment-line {
@@ -89,6 +127,18 @@ h5 {
   background-color: #9022FF;
   color: white;
   border: none;
+  padding: 10px 0;
+  border-radius: 60px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.close-button {
+  margin-top: 0.7rem;
+  width: 100%;
+  background-color: #fff;
+  color: #00081D;
+  border: 1px solid #E6E7EA;
   padding: 10px 0;
   border-radius: 60px;
   font-size: 16px;
