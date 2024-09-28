@@ -1,0 +1,134 @@
+.payment-completed-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(67, 70, 77, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  .payment-completed-container1 {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    width: 31.5rem; 
+    height: 18rem;
+  }
+  .payment-completed-container2 {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    width: 31.5rem; 
+    height: 22rem;
+  }
+
+  .payment-message {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  .circle-icon1 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #F4E9FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 12px solid #fef6f5;
+    margin-right: -10px;
+  }
+  .circle-icon2 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #F4E9FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 12px solid #F5F8FF;
+    margin-right: -10px;
+  }
+
+  .icon-text {
+    font-size: 1.6rem;
+    padding-bottom: 5px;
+  }
+  .payment-completed-container div {
+    font-size: 2rem; 
+  }
+  h5 {
+    margin: 0 0 0 2rem;
+    font-size: 1.7rem;
+  }
+  .amount1 {
+    font-size: 1.7rem;
+    color: #AA392E;
+    font-weight: 500;
+    margin: 0 0 0 2rem;
+  }
+  .amount2 {
+    font-size: 1.7rem;
+    color: #9022FF;
+    font-weight: 500;
+    margin: 0 0 0 2rem;
+  }
+  .error-message {
+    margin: 10px 0; 
+    color: #6B7283;
+    line-height: 1.5; 
+  }
+  .success-message {
+    margin: 10px 0; 
+    color: #6B7283;
+    line-height: 1.5; 
+  }
+  .payment-img {
+    height: 1.6rem;
+  }
+  .payment-line {
+    border-top: 1px solid #E0E0E0;
+    margin-bottom: 20px;
+  }
+  .payment-method,
+  .payment-time {
+    margin: 10px 0;
+    font-size: 0.9rem;
+    text-align: left; 
+    display: flex;
+    justify-content: space-between;
+    color: #6B7283;
+  }
+  .payment-method span,
+  .payment-time span {
+    font-size: 0.9rem;
+    color: #000;
+  }
+  .retry-button {
+    margin-top: 1.5rem;
+    width: 100%;
+    background-color: #9022FF;
+    color: white;
+    border: none;
+    padding: 10px 0;
+    border-radius: 60px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .close-button {
+    margin-top: 0.7rem;
+    width: 100%;
+    background-color: #fff;
+    color: #00081D;
+    border: 1px solid #E6E7EA;
+    padding: 10px 0;
+    border-radius: 60px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .retry-button:hover {
+    background-color: #752cea;
+  }

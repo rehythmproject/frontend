@@ -1,0 +1,45 @@
+.sign_input{
+    display: flex;
+    flex-direction: column;
+}
+
+.signup_label {
+    font-weight: 600;
+}
+
+.signup_input{
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid #969BA7;
+    margin-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.signup_input:focus {
+    outline: none;
+}
+
+.check_num_container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.chceck_num_button {
+    display: flex;
+    width: 18%;
+    height: 43px;
+    border-radius: 10px;
+    border: 1px solid #969BA7;
+    background-color: white;
+    color: #9022FF;
+    margin-top: 6px;
+    margin-left: 8px;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: bold;
+
+}
+

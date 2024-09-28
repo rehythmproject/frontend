@@ -1,0 +1,22 @@
+.sign_input{
+    display: flex;
+    flex-direction: column;
+}
+
+.signup_label {
+    font-weight: 600;
+}
+
+.signup_input{
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid #969BA7;
+    margin-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.signup_input:focus {
+    outline: none;
+}
+

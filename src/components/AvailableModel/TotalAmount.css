@@ -1,75 +1,271 @@
 .mainamount-div {
-    width: 360px;
-    height: auto; /* 높이를 자동으로 조정 */
-    border: 1px solid #E6E7EA;
-    border-right: none; 
-    border-bottom: none;
-    padding: 16px; 
-    box-sizing: border-box;
-    margin: auto;
-  }
+  width: 360px;
+  height: auto; /* 높이를 자동으로 조정 */
+  border: 1px solid #E6E7EA;
+  border-right: none; 
+  border-bottom: none;
+  padding: 16px; 
+  box-sizing: border-box;
+  margin-top: 30px;
+}
+
+.alltotal-div {
+  width: 300px;
+  margin: auto;
+}
+
+.amount-div {
+  color: #6B7283;
+  list-style: none;
+  margin-bottom: 5px;
+  font-size: 12px;
+  display: flex;               
+  justify-content: space-between;  
+  align-items: center; 
+  width: 100%; /* 폭을 100%로 설정 */
+}
+
+.total-amount {
+  font-size: 1.1rem;
+  color: #000
+}
+
+.total-hr {
+  width: 100%; /* 폭을 100%로 설정 */
+  border : 0px;
+  border-top: dashed #6B7283;
+}
+
+.total-div{
+  display: flex;
+  justify-content: space-between;  
+  align-items: center; 
+  width: 100%; /* 폭을 100%로 설정 */
+  box-sizing: border-box;
+  margin-top: 10px;
+}
+
+.total{
+  font-size: 24px;
+  list-style: none;
+  font-weight: 600;
+}
+
+.totalmoney {
+  list-style: none;
+  font-size: 22px;
+  font-weight: 500;
+  align-items: center;
+  color: #01703C;
+}
+
+.start-button {
+  margin: auto;
+  width: 290px; /* 폭을 100%로 설정 */
+  height: 36px;
+  border-radius: 60px;
+  border: none;
+  background-color: #9022FF;
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  display: block;
+  margin-top: 15px;
+}
+
+.start-button:hover {
+  background-color: #752cea;
+}
+.payment-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw; /*화면기준넓이*/
+  height: 100vh; /*화면기준높이*/
+  background-color: rgba(67, 70, 77, 0.5);
+  display: flex;
+  justify-content: flex-end;
+  z-index: 999;
+  overflow: hidden;
+}
+.payment-content {
+  background-color: white;
+  padding-right: 15px;
+  padding-left: 15px;
+  width: 540px;
+  height: 100vh;
+  z-index: 1000;
+  margin-right: 0;
+}
+.payment-header {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 12px;
+  padding-right: 12px;
+  margin-top: -10px;
+}
+.payment-header div p {
+  color: #6B7283;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+  margin-top: -10px;
+}
+.payment-header button {
+  border-style: none;
+  background-color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0F172A;
   
-  .alltotal-div {
-    width: 300px;
-    margin: auto;
-  }
+  cursor: pointer;
+}
+.payment-information {
+  width: 32rem;
+  height: 6rem;
+  background-color: #F4F6FA;
+  border-radius: 12px;
+  margin-left: 10px;
+  margin-bottom: -10px;
+  padding-top: 0.01rem;
+  padding-bottom: 10px;
+}
+.payment-content-main-money {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.payment-content-text-money {
+  margin-left: 12px;
+  color: #969BA7;
+}
   
-  .amount-div {
-    color: #6B7283;
-    list-style: none;
-    margin-bottom: 5px;
-    font-size: 12px;
-    display: flex;               
-    justify-content: space-between;  
-    align-items: center; 
-    width: 100%; /* 폭을 100%로 설정 */
-  }
-  
-  .total-amount {
-    font-size: 1.1rem;
-    color: #000
-  }
-  
-  .total-hr {
-    width: 100%; /* 폭을 100%로 설정 */
-    border : 0px;
-    border-top: dashed #6B7283;
-  }
-  
-  .total-div{
-    display: flex;
-    justify-content: space-between;  
-    align-items: center; 
-    width: 100%; /* 폭을 100%로 설정 */
-    box-sizing: border-box;
-    margin-top: 10px;
-  }
-  
-  .total{
-    font-size: 24px;
-    list-style: none;
-    font-weight: 600;
-  }
-  
-  .totalmoney {
-    list-style: none;
-    font-size: 22px;
-    font-weight: 500;
-    align-items: center;
-    color: #01703C;
-  }
-  
-  .start-button {
-    margin: auto;
-    width: 290px; /* 폭을 100%로 설정 */
-    height: 36px;
-    border-radius: 60px;
-    border: none;
-    background-color: #9022FF;
-    color: #FFFFFF;
-    font-weight: bold;
-    font-size: 16px;
-    cursor: pointer;
-    display: block;
-    margin-top: 15px;
-  }
+.payment-content-money {
+  margin-right: 12px;
+  font-weight: normal;
+}
+.payment-content-text-money2 {
+  margin-left: 12px;
+}
+.payment-content-money2 {
+  margin-right: 12px;
+  font-weight: bold;
+  color: #9022FF;
+  font-size: 1.1rem;
+}
+.paymentMethod {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.paymentMethod-content {
+  display: flex;
+  justify-content: space-between; 
+  margin-top: 20px;
+}
+.payment-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.paymentMethod-content p {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #000;
+  text-align: center;
+}
+.payment-button {
+  width: 15.5rem; 
+  height: 72px;
+  border: 0.1rem solid #E6E7EA;
+  background-color: white;
+  border-radius: 12px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.payment-button img {
+  width: 15rem; 
+  height: 60px;
+}
+.payment-button.active {
+  background-color: #fff; 
+  border: 2px solid #8b5cf6; 
+}
+.payment-button.active img {
+  width: 110px; 
+  height: 65px;
+}
+.payment-button:hover {
+  border: 2px solid #752cea;
+}
+/*토스 css*/
+.inputAmount {
+  margin-top: -20px;
+}
+.inputAmount-display input {
+  width: 32rem;
+  height: 36px;
+  text-align: right;
+  font-size: 20px;
+  border: 1px solid #E6E7EA;
+  border-radius: 40px;
+  margin-bottom: 8px;
+  padding-right: 10px;
+}
+.inputAmount-keypad {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.keypad-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10px;
+}
+.inputAmount-keypad-button {
+  width: 160px;
+  height: 40px;
+  font-size: 16px;
+  border-radius: 40px;
+  border: none;
+  background-color: #F9F9F9;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 10px;
+  text-align: center;
+}
+.inputAmount-keypad-button:hover {
+  background-color: #E6E7EA;
+}
+.keypad-delete {
+  width: 160px;
+  height: 40px;
+  border-radius: 40px;
+  border: none;
+  background-color: #FEEEEC;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 10px;
+  text-align: center;
+}
+.keypad-delete:hover {
+  background-color: #fce6e2;
+}
+.submit-button {
+  margin-top: 20px;
+  width: 32.5rem;
+  background-color: #9022FF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.submit-button:hover {
+  background-color: #751ACC;
+}

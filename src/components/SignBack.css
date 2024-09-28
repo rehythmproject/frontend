@@ -1,0 +1,12 @@
+.background_img{
+    width: 500px;
+    margin: 100px;
+    margin-right: 0px;
+    margin-top: 200px;
+}
+
+@media (max-width:1199px) {
+    .background_img{
+        display: none;
+    }
+}

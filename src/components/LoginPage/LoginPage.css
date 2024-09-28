@@ -1,0 +1,62 @@
+.signin_main{
+    display: flex;
+}
+
+.signin_text{
+    margin-bottom: 0;
+}
+
+.signin_desc{
+    font-size: 14px;
+    color: #6B7283;
+    margin-top: 10px;
+}
+
+.signin_right_items{
+    margin-left: 140px;
+    margin: auto;
+    margin-top: 120px;
+}
+
+.sign_input_container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    width: 560px;
+}
+
+.sign_input{
+    display: flex;
+    flex-direction: column;
+}
+
+.signin_label {
+    font-weight: 600;
+}
+
+.signin_input{
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid #969BA7;
+    margin-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.signin_input:focus {
+    outline: none;
+}
+
+.signin_footer{
+    width: 100%;
+    position:absolute;
+    bottom: 20px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.terms_and_conditions{
+    font-size: 15px;
+    margin: auto;
+}

@@ -8,10 +8,18 @@
 .main_title{
     margin-left: 18px;
 }
+.recent_list_container{
+    width: 1100px;
+    overflow-x: auto;
+    margin-left: 20px;
+}
+
+.recent_list_container::-webkit-scrollbar{
+    display: none;
+}
 
 .recent_list{
-    justify-content: space-around;
-    width: 1000px;
+    width: 1100px;
     margin-left: 0;
 }
 

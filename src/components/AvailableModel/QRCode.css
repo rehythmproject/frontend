@@ -1,0 +1,77 @@
+.qr-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .qr-container {
+    position: relative;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  .qr-container img {
+    width: 10rem;
+  }
+  .corner {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    border: 10px solid #9022FF;
+    border-radius: 6.24px;
+  }
+  .top-left {
+    top: -5px;
+    left: -5px;
+    border-right: none;
+    border-bottom: none;
+  }
+  .top-right {
+    top: -5px;
+    right: -5px;
+    border-left: none;
+    border-bottom: none;
+  }
+  .bottom-left {
+    bottom: -5px;
+    left: -5px;
+    border-right: none;
+    border-top: none;
+  }
+  .bottom-right {
+    bottom: -5px;
+    right: -5px;
+    border-left: none;
+    border-top: none;
+  }
+  .transaction-text {
+    margin-top: 20px;
+    color: #969BA7;
+    font-size: 1.15rem;
+  }
+  .loading_spinner_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .loading_spinner {
+    width: 40px;
+    height: 40px;
+    border: 5px solid #E6E7EA;
+    border-top: 5px solid #9022FF;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  .kakao-text {
+    color: #969BA7;
+    font-size: 0.8rem;
+    margin-bottom: -10px;
+  }
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }

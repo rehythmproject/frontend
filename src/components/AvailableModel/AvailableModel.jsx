@@ -3,7 +3,7 @@ import Main from './Main';
 import Side from './Side'
 import './AvailableModel.css';
 
-function AvailableModel() {
+const AvailableModel = () => {
   return (
     <div className="AvailableModel">
       <Header/>

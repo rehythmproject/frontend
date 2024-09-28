@@ -66,4 +66,9 @@
     background-color: #9022FF;
     color: white;
     margin-right: 10px;
+    cursor: pointer;
+}
+
+.model_add:hover {
+    background-color: #752cea;
 }
