@@ -18,14 +18,14 @@ const PaymentCompleted = ({ onRetry, closePaymentCompleted }) => {
   return (
     <div className="payment-completed-overlay">
     {paymentStatus === 'failure' ? (
-      <div className="payment-completed-container">
+      <div className="payment-completed-container1">
         <div className='payment-message'>
-        <div className="circle-icon">
+        <div className="circle-icon1">
             <span className="icon-text">❌</span>
           </div>
           <div>
             <h5>결제가 완료되지 않았습니다!</h5>
-            <p className="amount">₩982.00</p>
+            <p className="amount1">₩982.00</p>
           </div> 
         </div>
         <p className="error-message">한도초과, 결제금액 미달 등으로 인하여 결제가 원활하게 이루어 지지 않았습니다. 재시도 부탁드립니다.</p>
