@@ -50,7 +50,7 @@ const PaymentCompleted = ({ onRetry, closePaymentCompleted }) => {
           <div className='payment-line'></div>
           <p className="payment-method">Payment Method <span>kakao Pay</span></p>
           <p className="payment-time">Payment Time <span>22/02/2024 10:15 AM</span></p>
-          <button className="retry-button">바로 실행하기</button>
+          <button className="retry-button">바로 실행하기</button> {/*실행이 진행되는 화면으로 이동만들어야함*/}
           <button className='close-button' onClick={handlePaymentCompletedClick}>닫기</button>
         </div>
       ) : null}
