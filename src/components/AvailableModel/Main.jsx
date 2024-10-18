@@ -69,6 +69,8 @@ const Main = () => {
                 <li><ModelItem/></li>
                 <li><ModelItem/></li>
                 <li><ModelItem/></li>
+                <li><ModelItem/></li>
+                <li><ModelItem/></li>
             </ul>
         </div>
     );
