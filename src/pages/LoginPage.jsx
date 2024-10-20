@@ -1,6 +1,6 @@
 import './LoginPage.css'
-import SignBack from '../SignBack';
-import SocialLogin from '../SignupPage/SocialLogin';
+import SignBack from '../components/SignBack';
+import SocialLogin from '../components/SignPage/SocialLogin';
 import { Link, useNavigate } from 'react-router-dom';
 
 const LoginPage = () => {
@@ -28,7 +28,7 @@ const LoginPage = () => {
           </div>
             <button className='login_button' onClick={handleLoginButton}>Log in</button>
             <SocialLogin />
-            <p style={{color:'#969BA7', margin: 'auto', fontSize: '14px', paddingTop: '20px'}}>계정이 없으신가요? <Link style={{color:'#B948FF'}} to='/signup' >회원가입</Link></p>
+            <p style={{color:'#969BA7', margin: 'auto', fontSize: '14px', paddingTop: '20px'}}>계정이 없으신가요? <Link style={{color:'#B948FF'}} to='/signup/step1' >회원가입</Link></p>
           </div>
         </div>
         </div>

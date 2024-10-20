@@ -1,7 +1,7 @@
 import './SignupButton.css';
 import { useNavigate } from 'react-router-dom';
 
-const SignupButton = ({handleNextPage, currentPage, pwd, rpwd}) => {
+const SignupButton = ({handleNextPage, currentPage, pwd, rpwd, usernm, emailcheck, phoneCheck}) => {
     const navigate = useNavigate();
 
     // const handleButtonClick = () => {
@@ -11,6 +11,24 @@ const SignupButton = ({handleNextPage, currentPage, pwd, rpwd}) => {
     //     }
     // };
     const handleButtonClick = () => {
+        if(currentPage === 0){
+            if(usernm === ''){
+                alert('이름을 입력해주세요.');
+                return;
+            }
+        }
+        if(currentPage === 1){
+            if(emailcheck === false){
+                alert('이메일을 확인해주세요.');
+                return;
+            }
+        }
+        if(currentPage === 2){
+            if(phoneCheck === false){
+                alert('전화번호와 인증번호를 확인해주세요.');
+                return
+            }
+        }
         if(currentPage === 3){
             if(pwd === ''){
                 alert('비밀번호를 입력해주세요.');
@@ -27,15 +45,15 @@ const SignupButton = ({handleNextPage, currentPage, pwd, rpwd}) => {
 
         if (currentPage === 0) {
             //이메일 페이지 이동
-            navigate('second'); // 첫 번째 페이지에서 두 번째 페이지로 이동
+            navigate('step2'); // 첫 번째 페이지에서 두 번째 페이지로 이동
         } else if (currentPage === 1) {
             //전화번호 페이지 이동
-            navigate('third'); // 두 번째 페이지에서 세 번째 페이지로 이동
+            navigate('step3'); // 두 번째 페이지에서 세 번째 페이지로 이동
         } else if (currentPage === 2) {
             //비밀번호 페이지 이동
-            navigate('fourth')
+            navigate('step4')
         } else if (currentPage === 3) {
-            navigate('end');
+            navigate('finish');
         }
         handleNextPage(); // 검증이 성공하면 handleNextPage 실행
         //총 페이지보다 적으면 현재 페이지 번호 + 1
