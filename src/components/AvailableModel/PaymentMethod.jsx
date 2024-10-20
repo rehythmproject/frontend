@@ -40,7 +40,6 @@ const PaymentMethod = ({ closePayment, setIsPaymentCompleted }) => {
       </div>
       </div>
       }
-
       {selectedMethod === 'toss' && (
         <div className="inputAmount">
           <h4>Input Amount</h4>
@@ -72,7 +71,6 @@ const PaymentMethod = ({ closePayment, setIsPaymentCompleted }) => {
           <button className="submit-button" onClick={handlePaymentClick}>결제하기</button>
         </div>
       )}
-
       {selectedMethod === 'kakao' && (
         <div className="kakaoPayContent">
           <h4>Input Amount</h4>
@@ -83,5 +81,4 @@ const PaymentMethod = ({ closePayment, setIsPaymentCompleted }) => {
     </div>
   );
 };
-
 export default PaymentMethod;

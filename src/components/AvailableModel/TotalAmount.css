@@ -8,12 +8,12 @@
   box-sizing: border-box;
   margin-top: 30px;
 }
-  
+
 .alltotal-div {
   width: 300px;
   margin: auto;
 }
-  
+
 .amount-div {
   color: #6B7283;
   list-style: none;
@@ -24,18 +24,18 @@
   align-items: center; 
   width: 100%; /* 폭을 100%로 설정 */
 }
-  
+
 .total-amount {
   font-size: 1.1rem;
   color: #000
 }
-  
+
 .total-hr {
   width: 100%; /* 폭을 100%로 설정 */
   border : 0px;
   border-top: dashed #6B7283;
 }
-  
+
 .total-div{
   display: flex;
   justify-content: space-between;  
@@ -44,13 +44,13 @@
   box-sizing: border-box;
   margin-top: 10px;
 }
-  
+
 .total{
   font-size: 24px;
   list-style: none;
   font-weight: 600;
 }
-  
+
 .totalmoney {
   list-style: none;
   font-size: 22px;
@@ -58,7 +58,7 @@
   align-items: center;
   color: #01703C;
 }
-  
+
 .start-button {
   margin: auto;
   width: 290px; /* 폭을 100%로 설정 */
@@ -77,7 +77,6 @@
 .start-button:hover {
   background-color: #752cea;
 }
-
 .payment-background {
   position: fixed;
   top: 0;
@@ -90,7 +89,6 @@
   z-index: 999;
   overflow: hidden;
 }
-
 .payment-content {
   background-color: white;
   padding-right: 15px;
@@ -100,7 +98,6 @@
   z-index: 1000;
   margin-right: 0;
 }
-
 .payment-header {
   display: flex;
   justify-content: space-between;
@@ -108,7 +105,6 @@
   padding-right: 12px;
   margin-top: -10px;
 }
-
 .payment-header div p {
   color: #6B7283;
   font-size: 0.9rem;
@@ -116,7 +112,6 @@
   margin-bottom: 10px;
   margin-top: -10px;
 }
-
 .payment-header button {
   border-style: none;
   background-color: #fff;
@@ -126,7 +121,6 @@
   
   cursor: pointer;
 }
-
 .payment-information {
   width: 32rem;
   height: 6rem;
@@ -137,13 +131,11 @@
   padding-top: 0.01rem;
   padding-bottom: 10px;
 }
-
 .payment-content-main-money {
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
 }
-
 .payment-content-text-money {
   margin-left: 12px;
   color: #969BA7;
@@ -153,42 +145,35 @@
   margin-right: 12px;
   font-weight: normal;
 }
-
 .payment-content-text-money2 {
   margin-left: 12px;
 }
-
 .payment-content-money2 {
   margin-right: 12px;
   font-weight: bold;
   color: #9022FF;
   font-size: 1.1rem;
 }
-
 .paymentMethod {
   margin-left: 10px;
   margin-right: 10px;
 }
-
 .paymentMethod-content {
   display: flex;
   justify-content: space-between; 
   margin-top: 20px;
 }
-
 .payment-option {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
 .paymentMethod-content p {
   margin-top: 10px;
   font-size: 12px;
   color: #000;
   text-align: center;
 }
-
 .payment-button {
   width: 15.5rem; 
   height: 72px;
@@ -200,31 +185,25 @@
   justify-content: center;
   cursor: pointer;
 }
-
 .payment-button img {
   width: 15rem; 
   height: 60px;
 }
-
 .payment-button.active {
   background-color: #fff; 
   border: 2px solid #8b5cf6; 
 }
-
 .payment-button.active img {
   width: 110px; 
   height: 65px;
 }
-
 .payment-button:hover {
   border: 2px solid #752cea;
 }
-
 /*토스 css*/
 .inputAmount {
   margin-top: -20px;
 }
-
 .inputAmount-display input {
   width: 32rem;
   height: 36px;
@@ -235,21 +214,18 @@
   margin-bottom: 8px;
   padding-right: 10px;
 }
-
 .inputAmount-keypad {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
 .keypad-row {
   display: flex;
   justify-content: space-between;
   width: 100%;
   margin-top: 10px;
 }
-
 .inputAmount-keypad-button {
   width: 160px;
   height: 40px;
@@ -262,11 +238,9 @@
   margin-left: 10px;
   text-align: center;
 }
-
 .inputAmount-keypad-button:hover {
   background-color: #E6E7EA;
 }
-
 .keypad-delete {
   width: 160px;
   height: 40px;
@@ -278,11 +252,9 @@
   margin-left: 10px;
   text-align: center;
 }
-
 .keypad-delete:hover {
   background-color: #fce6e2;
 }
-
 .submit-button {
   margin-top: 20px;
   width: 32.5rem;
@@ -294,9 +266,6 @@
   font-size: 16px;
   cursor: pointer;
 }
-
 .submit-button:hover {
   background-color: #751ACC;
 }
-
-

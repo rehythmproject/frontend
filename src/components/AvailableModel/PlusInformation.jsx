@@ -4,11 +4,9 @@ import './PlusInformation.css';
 
 const PlusInformation = () => {
   const [plusInformation, setPlusInformation] = useState(false);
-
   const openInformation = () => {
     setPlusInformation(true);
   }
-
   const closeInformation = () => {
     setPlusInformation(false)
   }
@@ -25,10 +23,9 @@ const PlusInformation = () => {
         <button className="add-button" onClick={openInformation}>
           <div className='add-div'>
             <img src="./images/pencil-square.png" alt="편집" style={{background:'none', width:'17px'}}/>
-            <span> 정보 저장 </span>
+            <span>정보 저장</span>
           </div>
         </button>
-
         {plusInformation && (
         <div className="modal-background">
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
@@ -46,7 +43,6 @@ const PlusInformation = () => {
           </div>
         </div>
       )}
-
       </div>      
   )
 }

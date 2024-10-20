@@ -1,0 +1,30 @@
+.signup_main{
+    display: flex;
+}
+
+.signup_right_items{
+    margin-left: 140px;
+    margin: auto;
+    margin-top: 120px;
+}
+
+.sign_input_container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    width: 560px;
+}
+
+.signup_footer{
+    width: 100%;
+    position:absolute;
+    bottom: 20px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.terms_and_conditions{
+    font-size: 15px;
+    margin: auto;
+}

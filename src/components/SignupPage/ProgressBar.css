@@ -1,0 +1,36 @@
+.progress_bar {
+    margin-top: 5px;
+    padding-left: 60px;
+    display: flex;
+    justify-content: space-between;
+    width: 540px;
+}
+
+.progress_segment {
+    flex: 1;
+    height: 6px;
+    margin: 0 5px;
+    border: 1px solid #F3F4F6; /* 테두리 회색 */
+    background-color: #F3F4F6; /* 기본 연한 회색 */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.progress_segment_end{
+    flex: 1;
+    height: 6px;
+    border: 1px solid #F3F4F6; /* 테두리 회색 */
+    background-color: #9022FF; /* 기본 연한 회색 */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.filled {
+    background-color: #9022FF; /* 연한 보라색 */
+}
+
+@media (max-width:1199px) {
+    .progress_bar{
+        display: none;
+    }
+}
