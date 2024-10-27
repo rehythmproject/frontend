@@ -1,0 +1,20 @@
+.RecordButtons{
+    display: flex;
+    justify-content: space-between;
+}
+
+.usemodel_record{
+    color: #9022FF;
+    background-color: #F4E9FF;
+    border: none;
+    border-radius: 30px;
+    padding: 15px;
+    width: 200px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.usemodel_record.payment{
+    color: white;
+    background-color: #9022FF;
+}

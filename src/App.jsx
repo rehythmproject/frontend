@@ -8,7 +8,7 @@ import FourthSignup from './components/SignPage/FourthSignup';
 import EndSignup from './components/SignPage/EndSignup';
 import LoginPage from './pages/LoginPage';
 import AvailableModel from './pages/AvailableModel';
-import UseModelList from './pages/UseModelList';
+import UseModelPage from './pages/UseModelPage';
 
 function App() {
 
@@ -26,7 +26,7 @@ function App() {
             </Route>
         </Route>
         <Route path='/availableModel' element={<AvailableModel />}/>
-        <Route path='/useModelList' element={<UseModelList />} />
+        <Route path='/useModelPage' element={<UseModelPage />} />
       </Routes>
     </div>
   );
