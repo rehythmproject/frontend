@@ -1,16 +1,53 @@
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import './Header.css';
 
 const Header = () => {
+    const location = useLocation();
+    const [active, setActive] = useState(null);
+
+    useEffect(() => {
+        if (location.pathname === "/AvailableModel") {
+            setActive(0);
+        } else if (location.pathname === "/UseModelList") {
+            setActive(1);
+        } else if (location.pathname === "/사용기록") {
+            setActive(2);
+        } else if (location.pathname === "/금액") {
+            setActive(3);
+        } else if (location.pathname === "/프로젝트매니저") {
+            setActive(4);
+        }    
+    }, [location]);
     return (
         <div className="header_container">
             <img src="/images/Re듬.png" alt="logo" className="reduem_logo" style={{ width:'110px'}}/>
             <div className="navigation_container">
                 <ul className='navi_list'>
-                    <li className='navi'><img src="/images/사용가능한모델.png" style={{ width:'25px', height:'25px' }}/><span className='navi_title' style={{color:'#9022FF'}}>사용가능한 모델</span></li>
-                    <li className='navi'><img src="/images/사용한목록.png" style={{ width:'25px', height:'25px' }}/><span className='navi_title'>사용한 목록</span></li>
-                    <li className='navi'><img src="/images/사용기록.png" style={{ width:'25px', height:'25px' }}/><span className='navi_title'>사용기록</span></li>
-                    <li className='navi'><img src="/images/금액.png" style={{ width:'25px', height:'25px' }}/><span className='navi_title'>금액</span></li>
-                    <li className='navi'><img src="/images/프로젝트매니저.png" style={{ width:'25px', height:'25px' }}/><span className='navi_title'>프로젝트 매니저</span></li>
+                    <Link to="/AvailableModel">
+                        <li className={`navi ${active === 0 ? 'active' : ''}`}>
+                            <img src="/images/사용가능한모델.png" style={{ width:'25px', height:'25px' }}/>
+                            <span className='navi_title'>사용가능한 모델</span>
+                        </li>
+                    </Link>
+                    <Link to="/UseModelList">
+                        <li className={`navi ${active === 1 ? 'active' : ''}`}>
+                            <img src="/images/사용한목록.png" style={{ width:'25px', height:'25px' }}/>
+                            <span className='navi_title'>사용한 목록</span>
+                        </li>
+                    </Link>
+                    <li className={`navi ${active === 2 ? 'active' : ''}`}>
+                        <img src="/images/사용기록.png" style={{ width:'25px', height:'25px' }}/>
+                        <span className='navi_title'>사용기록</span>
+                    </li>
+                    <li className={`navi ${active === 3 ? 'active' : ''}`}>
+                        <img src="/images/금액.png" style={{ width:'25px', height:'25px' }}/>
+                        <span className='navi_title'>금액</span>
+                    </li>
+                    <li className={`navi ${active === 4 ? 'active' : ''}`}>
+                        <img src="/images/프로젝트매니저.png" style={{ width:'25px', height:'25px' }}/>
+                        <span className='navi_title'>프로젝트 매니저</span>
+                    </li>
                 </ul>
             </div>
             <div className="setup_container">

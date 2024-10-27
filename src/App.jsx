@@ -9,6 +9,7 @@ import EndSignup from './components/SignPage/EndSignup';
 import LoginPage from './pages/LoginPage';
 import AvailableModel from './pages/AvailableModel';
 import UseModelList from './pages/UseModelList';
+import ViewRecords from './pages/ViewRecords';
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
         </Route>
         <Route path='/availableModel' element={<AvailableModel />}/>
         <Route path='/useModelList' element={<UseModelList />} />
+        <Route path='/ViewRecords' element={<ViewRecords />} />
       </Routes>
     </div>
   );

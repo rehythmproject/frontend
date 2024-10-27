@@ -1,0 +1,107 @@
+.mainViewRecords {
+  margin-top: 80px;
+  width: 100%;
+  background-color: #FAFAFA;
+  padding-bottom: 300px;
+}
+
+.mainViewRecords_title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mainViewRecords_title h3 {
+  margin-left: 1rem;
+}
+
+.mainViewRecords_title div {
+  color: #6B7283;
+  margin: 1rem 24rem;
+}
+
+.content-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px 0;
+  font-weight: 600;
+}
+
+.counter {
+  background-color: #F3E8FF;
+  color: #8B5CF6;
+  border-radius: 20px;
+  padding: 5px 10px;
+  font-size: 1rem;
+}
+
+
+/* 테이블 스타일*/
+/*.table-container {
+  width: 90%;
+  margin: 20px auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead th {
+  background-color: #FAFAFA;
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  color: #6B7280;
+  font-weight: 500;
+}
+
+tbody td {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  color: #374151;
+}
+
+tbody tr:nth-child(2) {
+  background-color: #F3E8FF;
+  color: #8B5CF6;
+}
+
+tbody tr:nth-child(2) td {
+  border-left: 3px solid #8B5CF6;
+}
+
+tbody tr:hover {
+  background-color: #F9FAFB;
+}*/
+
+/* 페이지네이션 스타일 */
+/* .pagination {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  margin: 0 5px;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.pagination .active {
+  background-color: #8B5CF6;
+  color: white;
+}
+
+.page-info {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #6B7280;
+}  */

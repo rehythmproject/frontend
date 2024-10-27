@@ -29,8 +29,25 @@ li {
     display: flex;
     width: auto;
     margin-right: 5px;
-    
+    cursor: pointer;
 }
+
+a {
+    text-decoration: none;
+}
+
+.navi_title {
+    color: black;
+}
+
+.navi.active .navi_title {
+    color: #9022FF;
+}
+
+.navi.active img {
+    filter: invert(24%) sepia(89%) saturate(6514%) hue-rotate(267deg) brightness(102%) contrast(103%);
+}
+
 span{
     width: auto;
     margin-top:2px;
