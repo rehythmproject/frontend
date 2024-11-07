@@ -51,7 +51,7 @@ const UseModelPage = () => {
                     </div>
                 </div>
                 <div className="usemodel_main">
-                    <h3 style={{whiteSpace: 'nowrap'}}>모델 사용 기록들</h3>
+                    <h3 style={{whiteSpace: 'nowrap', marginLeft:'30px'}}>모델 사용 기록들</h3>
                     <div>
                         <ul className='usemodel_list' style={{padding:0}}>
                             {

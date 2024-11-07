@@ -56,3 +56,24 @@
     border-radius: 30px;
     margin-top: 10px;
 }
+
+.usemodel_date{
+    font-size: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #E6E7EA;
+}
+
+.usemodel_total_amount{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.usemodel_total_amount p {
+    margin-top: 0px;
+}
+
+.usemodel_total_amount .price {
+    font-size: 18px;
+    font-weight: 600;
+}

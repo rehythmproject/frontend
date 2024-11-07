@@ -27,9 +27,9 @@ const UseModelItem = ({item}) => {
             <p className='usemodel_date'>{item.date}</p>
             <div className="usemodel_total_amount">
                 <p>총 금액</p>
-                <p>₩{item.total}</p>
+                <p className='price'>₩{item.total}.00</p>
             </div>
-            <RecordButtons />
+            <RecordButtons Code={item.code}/>
         </div>
     )
 }

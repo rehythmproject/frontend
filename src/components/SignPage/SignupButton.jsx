@@ -1,5 +1,5 @@
 import './SignupButton.css';
-import { useNavigate } from 'react-router-dom';
+import { replace, useNavigate } from 'react-router-dom';
 
 const SignupButton = ({handleNextPage, currentPage, pwd, rpwd, usernm, emailcheck, phoneCheck}) => {
     const navigate = useNavigate();

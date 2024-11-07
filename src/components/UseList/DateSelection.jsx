@@ -6,7 +6,7 @@ const DateSelection = () => {
 
     return(
         <div className="DateSelection_all">
-            <span style={{marginTop:'8px', margin:'8px'}}>Date</span>
+            <span style={{marginTop:'12px', margin:'8px'}}>Date</span>
         <div className="DateSelection">
             <input className="DateSelection_datebox" type="date" placeholder="placeholder"/>
             <button className="DateSelection_botton"><img src="images/arrow-right.png"/></button>
