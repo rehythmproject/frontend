@@ -3,6 +3,7 @@
   width: 100%;
   background-color: #FAFAFA;
   padding-bottom: 300px;
+  position: fixed;
 }
 
 .mainViewRecords_title {
@@ -16,34 +17,72 @@
 
 .mainViewRecords_title div {
   color: #6B7283;
-  margin: 1rem 24rem;
+  margin: 1rem 26rem;
+  font-size: 0.8rem;
+  padding-top: 0.6rem;
 }
 
-.content-summary {
+.mainViewRecords_container {
+  background-color: #FAFAFA;
+  border-radius: 12px;
+  border: solid 1px #E6E7EA;
+  margin-left: 1.5rem;
+  margin-right: 25rem;
+}
+
+.content_summary {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 90%;
-  margin: 0 auto;
-  padding: 10px 0;
+  width: 100%;
   font-weight: 600;
+  background-color: #fff;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  border-bottom: solid 1px #E6E7EA;
+}
+
+.content_summary h4 {
+  margin-left: 0.8rem;
+  font-size: 1.1rem;
 }
 
 .counter {
   background-color: #F3E8FF;
   color: #8B5CF6;
   border-radius: 20px;
-  padding: 5px 10px;
-  font-size: 1rem;
+  padding: 4px 8px;
+  font-size: 0.8rem;
+  margin-left: 0.6rem;
+}
+
+.content_select {
+  margin-left: 56rem;
+  cursor: pointer;
 }
 
 
 /* 테이블 스타일*/
-/*.table-container {
-  width: 90%;
-  margin: 20px auto;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+.table_name {
+  display: flex;
+  margin-top: 1rem;
+  margin-left: 0.8rem;
+}
+
+.table_name div {
+  display: flex;
+  margin-right: 2rem;
+}
+
+.table_container {
+  width: 100%;
+  border: 1px solid #E6E7EA;
+  background-color: #fff;
+  margin-top: 8rem;
+}
+
+.table_container tr:hover {
+  background-color: #F4E9FF;
+  border: 1px solid #9022FF;
 }
 
 table {
@@ -66,18 +105,17 @@ tbody td {
   color: #374151;
 }
 
-tbody tr:nth-child(2) {
-  background-color: #F3E8FF;
-  color: #8B5CF6;
+.record_modelName {
+  color: #6B7283;
 }
 
-tbody tr:nth-child(2) td {
-  border-left: 3px solid #8B5CF6;
+.record_time {
+  color: #6B7283;
 }
 
-tbody tr:hover {
-  background-color: #F9FAFB;
-}*/
+.record_status {
+  color: #9022FF;
+}
 
 /* 페이지네이션 스타일 */
 /* .pagination {

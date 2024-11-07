@@ -8,7 +8,7 @@ import FourthSignup from './components/SignPage/FourthSignup';
 import EndSignup from './components/SignPage/EndSignup';
 import LoginPage from './pages/LoginPage';
 import AvailableModel from './pages/AvailableModel';
-import UseModelList from './pages/UseModelList';
+import UseModelPage from './pages/UseModelPage';
 import ViewRecords from './pages/ViewRecords';
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route path='/' >
-          <Route path='/' element={<LoginPage />} /> {/**/}
+          <Route path='/' element={<LoginPage />} /> 
             <Route path='signup' element={<SignupPage/>}>
               <Route path='step1' element={<FirstSignup/>}/>
               <Route path='step2' element={<SecondSignup/>}/>
@@ -27,8 +27,10 @@ function App() {
             </Route>
         </Route>
         <Route path='/availableModel' element={<AvailableModel />}/>
-        <Route path='/useModelList' element={<UseModelList />} />
-        <Route path='/ViewRecords' element={<ViewRecords />} />
+
+        <Route path='/UseModelPage' element={<UseModelPage />}> 
+        <Route path='/ViewRecords/:code' element={<ViewRecords />}/>
+        </Route>
       </Routes>
     </div>
   );

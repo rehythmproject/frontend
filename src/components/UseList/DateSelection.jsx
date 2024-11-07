@@ -1,19 +1,15 @@
-import { useNavigate } from "react-router-dom";
+import React from 'react';
+import './DateSelection.css'
 
 const DateSelection = () => {
 
-    const navigate = useNavigate();
-
-    const navigateToRecords = () => {
-        navigate("/ViewRecords");
-  };
-
     return(
-        <div>
-            <input type="text" value='' placeholder="placeholder" />
-            <button><img src="images/arrow-right.png" alt=""/></button>
-            <button onClick={navigateToRecords}>기록보기</button>
-
+        <div className="DateSelection_all">
+            <span style={{marginTop:'8px', margin:'8px'}}>Date</span>
+        <div className="DateSelection">
+            <input className="DateSelection_datebox" type="date" placeholder="placeholder"/>
+            <button className="DateSelection_botton"><img src="images/arrow-right.png" alt=''/></button>
+        </div>
         </div>
     )
 }
