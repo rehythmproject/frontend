@@ -1,11 +1,11 @@
 import './FirstSignup.css'
-import { useState } from 'react';
-import { Link,useOutletContext } from 'react-router-dom';
+import { useContext, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { signFormContext } from '../../pages/SignupPage'
 
 const SecondSignup = () => {
-  const [, , , , checkEmail] = useOutletContext();
-
-  const [email, setEmail] = useState('');
+  const {signData, setSignData} = useContext(signFormContext);
+  
   const [cerconBtn, setCerconBtn] = useState(false);
   
   const validateEmail = (email) => {
@@ -13,7 +13,10 @@ const SecondSignup = () => {
   }
 
   const handleEmail = (e) => {
-    setEmail(e.target.value);
+    setSignData({
+      ...signData,
+      email: e.target.value
+    })
   }
   const handleCerconButton = () => {
     if(email === ''){

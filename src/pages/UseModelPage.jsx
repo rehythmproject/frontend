@@ -3,33 +3,33 @@ import DateSelection from "../components/UseList/DateSelection";
 import SearchBox from "../components/UseList/SearchBox";
 import UseModelItem from "../components/UseList/UseModelItem";
 import './UseModelPage.css';
-
+import { Outlet } from "react-router-dom";
 
 const useModelList = [
     {
         title: '몬드리안 회사와 미팅',
-        code: '#1234',
+        code: '1234',
         model_tag: '업무',
         date: '2024-10-21',
         total: 542.00
     },
     {
         title: '새 프로젝트 진행 회의',
-        code: '#1235',
+        code: '1235',
         model_tag: '회의',
         date: '2024-08-21',
         total: 124.00
     },
     {
         title: '내 개인 발음교정',
-        code: '#3553',
+        code: '3553',
         model_tag: '공부',
         date: '2024-04-21',
         total: 124.00
     },
     {
         title: '기후변화 토론 정리',
-        code: '#1253',
+        code: '1253',
         model_tag: '공부',
         date: '2024-09-21',
         total: 124.00
@@ -64,7 +64,7 @@ const UseModelPage = () => {
                 </div>
                 
             </div>
-            
+            <Outlet />
         </div>
     )
 }

@@ -29,7 +29,7 @@ const UseModelItem = ({item}) => {
                 <p>총 금액</p>
                 <p className='price'>₩{item.total}.00</p>
             </div>
-            <RecordButtons Code={item.code}/>
+            <RecordButtons code={item.code}/>
         </div>
     )
 }

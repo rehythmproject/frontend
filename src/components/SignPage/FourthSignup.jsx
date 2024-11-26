@@ -1,15 +1,22 @@
 import './FourthSignup.css'
-import { useOutletContext } from 'react-router-dom';
+import { signFormContext } from '../../pages/SignupPage';
+import { useContext } from 'react';
 
 const FourthSignup = () => {
-  const [pwd, rpwd, updatePassword] = useOutletContext(); //부모로부터 값 받아오기
+  const {signData, setSignData} = useContext(signFormContext);
 
   const handlePwd = (e) => {
-    updatePassword(e.target.value, rpwd);
+    setSignData({
+      ...signData,
+      pwd: e.target.value
+    })
   }
   
   const handleRpwd = (e) => {
-    updatePassword(pwd, e.target.value);
+    setSignData({
+      ...signData,
+      rpwd: e.target.value
+    });
   }
 
   return (

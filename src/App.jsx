@@ -9,6 +9,7 @@ import EndSignup from './components/SignPage/EndSignup';
 import LoginPage from './pages/LoginPage';
 import AvailableModel from './pages/AvailableModel';
 import UseModelPage from './pages/UseModelPage';
+import RecordModel from './pages/RecordModel';
 
 function App() {
 
@@ -26,9 +27,11 @@ function App() {
             <Route path='finish' element={<EndSignup />} />
           </Route>
         </Route>
-        <Route path='/availableModel' element={<AvailableModel />}/>
-        <Route path='/useModelPage' element={<UseModelPage />} />
-        <Route path='/recordModel/:code'/>
+        <Route path='availableModel' element={<AvailableModel />}/>
+        <Route path='useModelPage' element={<UseModelPage />} />
+        <Route path='useModelPage/recordModel/:code' element={<RecordModel />}/>
+        {/* <Route path='recordModel' element={<RecordModel />}/> */}
+
       </Routes>
     </div>
   );

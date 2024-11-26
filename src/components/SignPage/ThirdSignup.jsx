@@ -1,18 +1,24 @@
 import './ThirdSignup.css'
-import { Link, useOutletContext } from 'react-router-dom';
-import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useContext, useState } from 'react';
+import { signFormContext } from '../../pages/SignupPage'
+
 
 const ThirdSignup = () => {
-  const [,,,,,checkPhone] = useOutletContext();
+  const { signData, setSignData } = useContext(signFormContext);
+  // const [,,,,,checkPhone] = useOutletContext();
   const check_num ='111111';
-  const [phone, setPhone] = useState('');
+  //const [phone, setPhone] = useState('');
   const [checkNum, setCheckNum] = useState('');
 
   const handlePhone = (e) => {
     const value = e.target.value;
     // 숫자만 허용
     if (/^\d*$/.test(value) || value === '') {
-      setPhone(value);
+      setSignData({
+        ...signData,
+        phone: value
+      })
     }
   }
   const handleCheckNumChange = (e) => {

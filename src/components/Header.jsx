@@ -39,14 +39,6 @@ const Header = () => {
                         </li>
                         )}
                     </NavLink>
-                    <NavLink style={{textDecoration:'none'}}>
-                        {({isActive}) => (
-                        <li className='navi'>
-                            <img src={isActive ? "/images/프로젝트매니저2.png" : "/images/프로젝트매니저.png"} style={{ width:'25px', height:'25px' }}/>
-                            <span className='navi_title' style={{color: isActive ? '#9022FF' : 'black'}}>프로젝트 매니저</span>
-                        </li>
-                        )}
-                    </NavLink>
                 </ul>
             </div>
             <div className="setup_container">

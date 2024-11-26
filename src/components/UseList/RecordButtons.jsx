@@ -1,10 +1,10 @@
 import { useNavigate } from 'react-router-dom'
 import './RecordButton.css'
 
-const RecordButtons = ({Code}) => {
+const RecordButtons = ({code}) => {
     const navigate = useNavigate();
     const onClickGoRecord = () => {
-        navigate(`/recordModel/${Code}`)
+        navigate(`/useModelPage/recordModel/${code}`)
     }
     return(
         <div className="RecordButtons">
