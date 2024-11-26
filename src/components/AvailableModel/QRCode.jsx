@@ -10,7 +10,7 @@ const QRCode = () => {
                 <div className="corner top-right"></div>
                 <div className="corner bottom-left"></div>
                 <div className="corner bottom-right"></div>
-                <img src='./images/QRcode.png' alt="QR Code" />
+                <img src='/images/QRcode.png' alt="QR Code" />
             </div>
             <p className='transaction-text'>Waiting for transaction confirmation</p>
             <div className='loading_spinner_box'>

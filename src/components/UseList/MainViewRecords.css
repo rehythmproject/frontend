@@ -1,5 +1,5 @@
 .mainViewRecords {
-  margin-top: 80px;
+  margin-top: 48px;
   width: 100%;
   background-color: #FAFAFA;
   padding-bottom: 300px;
@@ -77,7 +77,7 @@
   width: 100%;
   border: 1px solid #E6E7EA;
   background-color: #fff;
-  margin-top: 8rem;
+  margin-top: 7rem;
 }
 
 .table_container tr:hover {
@@ -88,15 +88,6 @@
 table {
   width: 100%;
   border-collapse: collapse;
-}
-
-thead th {
-  background-color: #FAFAFA;
-  padding: 12px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
-  color: #6B7280;
-  font-weight: 500;
 }
 
 tbody td {
@@ -118,13 +109,20 @@ tbody td {
 }
 
 /* 페이지네이션 스타일 */
-/* .pagination {
-  text-align: center;
-  margin-top: 20px;
+.pageMove {
+  display: flex;
+  background-color: #fff;
 }
 
+.page_info {
+  color: #6B7283;
+  margin-left: 10px;
+  margin-right: 45rem;
+} 
+
 .pagination button {
-  margin: 0 5px;
+  margin-top: 10px;
+  margin-right: 10px;
   padding: 8px 12px;
   border: 1px solid #ddd;
   background-color: white;
@@ -132,14 +130,32 @@ tbody td {
   border-radius: 50%;
 }
 
+.page_move_button button {
+  margin-top: 10px;
+  padding: 2px 4px;
+  border: 1px solid #9022FF;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.page_move_button img {
+  margin-top: 1px;
+  margin-left: 1px;
+}
+
+.pagination_button {
+  margin: 0px;
+}
+
+.pagination button img {
+  width: 16px; 
+  height: auto;
+  margin: 0px;
+}
+
 .pagination .active {
-  background-color: #8B5CF6;
+  background-color: #9022FF;
   color: white;
 }
 
-.page-info {
-  text-align: center;
-  margin-top: 10px;
-  font-size: 0.9rem;
-  color: #6B7280;
-}  */
