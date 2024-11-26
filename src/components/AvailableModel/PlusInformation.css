@@ -23,17 +23,16 @@
   padding-left: 10px;
   font-size: 12px;
 }
-
+  
 .write-button {
   position: absolute;
   width: 16px;
-  top: 8px; /* 버튼 위치 조정 */
+  top: 8px; 
   right: 20px;
   background: transparent; /* 배경 투명 */
   border: none;
   cursor: pointer;
 }
-
 .add-button{
   width : 316px; 
   height: 32px; 
@@ -88,12 +87,11 @@
   margin-bottom: 10px;
 }
 .modal-header button {
-  border-style: none;
-  background-color: #fff;
-  font-size: 1.1rem;
   color: #6B7283;
   margin-bottom: 10px;
   cursor: pointer;
+  border: none;
+  background-color: #fff;
 }
 .modal-content-div {
   border-top: 1px solid #E0E0E0;

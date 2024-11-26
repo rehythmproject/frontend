@@ -3,7 +3,6 @@ import DateSelection from "../components/UseList/DateSelection";
 import SearchBox from "../components/UseList/SearchBox";
 import UseModelItem from "../components/UseList/UseModelItem";
 import './UseModelPage.css';
-import { Outlet } from "react-router-dom";
 
 const useModelList = [
     {
@@ -62,7 +61,6 @@ const UseModelPage = () => {
                         </ul>
                     </div>
                 </div>
-                
             </div>
             <Outlet />
         </div>

@@ -1,15 +1,19 @@
 import React, { useState } from 'react';
 import './PaymentMethod.css';
 import QRCode from './QRCode';
+
 const PaymentMethod = ({ closePayment, setIsPaymentCompleted }) => {
   const [selectedMethod, setSelectedMethod] = useState('toss');
+
   const handleClick = (method) => {
     setSelectedMethod(method);
   };
+
   const handlePaymentClick = () => {
-    setIsPaymentCompleted(true); // 결제 완료 상태로 변경
-    closePayment(); // 결제 창 닫기
+    setIsPaymentCompleted(true); 
+    closePayment(); 
   };
+
   return (
     <div className="paymentMethod">
       {selectedMethod === 'toss' &&
@@ -38,32 +42,11 @@ const PaymentMethod = ({ closePayment, setIsPaymentCompleted }) => {
       }
       {selectedMethod === 'toss' && (
         <div className="inputAmount">
-          <h4>Input Amount</h4>
+          <h4>Amount</h4>
           <div className="inputAmount-display">
             <input type="text" value="₩982.00" readOnly />
           </div>
-          <div className="inputAmount-keypad">
-            <div className="keypad-row">
-              <button className='inputAmount-keypad-button'>1</button>
-              <button className='inputAmount-keypad-button'>2</button>
-              <button className='inputAmount-keypad-button'>3</button>
-            </div>
-            <div className="keypad-row">
-              <button className='inputAmount-keypad-button'>4</button>
-              <button className='inputAmount-keypad-button'>5</button>
-              <button className='inputAmount-keypad-button'>6</button>
-            </div>
-            <div className="keypad-row">
-              <button className='inputAmount-keypad-button'>7</button>
-              <button className='inputAmount-keypad-button'>8</button>
-              <button className='inputAmount-keypad-button'>9</button>
-            </div>
-            <div className="keypad-row">
-              <button className='inputAmount-keypad-button'>00</button>
-              <button className='inputAmount-keypad-button'>0</button>
-              <button className='keypad-delete'><img src="./images/delete.png" alt="삭제" /></button>
-            </div>
-          </div>
+          
           <button className="submit-button" onClick={handlePaymentClick}>결제하기</button>
         </div>
       )}
@@ -71,7 +54,7 @@ const PaymentMethod = ({ closePayment, setIsPaymentCompleted }) => {
         <div className="kakaoPayContent">
           <h4>Input Amount</h4>
           <QRCode />
-          <button className="submit-button" onClick={handlePaymentClick}>결제하기</button>
+          <button className="kakao-submit-button" onClick={handlePaymentClick}>결제하기</button>
         </div>
       )}
     </div>

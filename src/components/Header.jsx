@@ -10,7 +10,7 @@ const Header = () => {
                     <NavLink to="/availableModel" style={{textDecoration:'none'}}>
                         {({isActive}) => (
                         <li className='navi'>
-                            <img src={isActive ? "/images/사용가능한모델2.png" : "/images/사용가능한모델.png"} style={{ width:'25px', height:'25px' }}/>
+                            <img src={isActive ? "/images/사용가능한모델2.png" : "/images/사용가능한모델.png"} alt='' style={{ width:'25px', height:'25px' }}/>
                             <span className='navi_title' style={{color: isActive ? '#9022FF' : 'black'}}>사용가능한 모델</span>
                         </li>
                         )}
@@ -18,7 +18,7 @@ const Header = () => {
                     <NavLink to="/useModelPage" style={{textDecoration:'none'}}>
                         {({isActive}) => (
                         <li className='navi'>
-                            <img src={isActive ? "/images/사용한목록2.png" : "images/사용한목록.png"} style={{ width:'25px', height:'25px' }}/>
+                            <img src={isActive ? "/images/사용한목록2.png" : "images/사용한목록.png"} alt='' style={{ width:'25px', height:'25px' }}/>
                             <span className='navi_title' style={{color: isActive ? '#9022FF' : 'black'}}>사용한 목록</span>
                         </li>
                         )}
@@ -26,7 +26,7 @@ const Header = () => {
                     <NavLink style={{textDecoration:'none'}}>
                         {({isActive}) => (
                         <li className='navi'>
-                            <img src={isActive ? "/images/사용기록2.png" : "/images/사용기록.png"} style={{ width:'25px', height:'25px' }}/>
+                            <img src={isActive ? "/images/사용기록2.png" : "/images/사용기록.png"} alt='' style={{ width:'25px', height:'25px' }}/>
                             <span className='navi_title' style={{color: isActive ? '#9022FF' : 'black'}}>사용기록</span>
                         </li>
                         )}
@@ -34,7 +34,7 @@ const Header = () => {
                     <NavLink style={{textDecoration:'none'}}>
                         {({isActive}) => (
                         <li className='navi'>
-                            <img src={isActive ? "/images/금액2.png" : "/images/금액.png"} style={{ width:'25px', height:'25px' }}/>
+                            <img src={isActive ? "/images/금액2.png" : "/images/금액.png"} alt='' style={{ width:'25px', height:'25px' }}/>
                             <span className='navi_title' style={{color: isActive ? '#9022FF' : 'black'}}>금액</span>
                         </li>
                         )}

@@ -1,11 +1,12 @@
 import { useNavigate } from 'react-router-dom'
 import './RecordButton.css'
 
-const RecordButtons = ({code}) => {
+const RecordButtons = ({ code }) => {
     const navigate = useNavigate();
     const onClickGoRecord = () => {
-        navigate(`/useModelPage/recordModel/${code}`)
+        navigate(`/useModelPage/ViewRecords/${code}`);
     }
+
     return(
         <div className="RecordButtons">
             <button className="usemodel_record" onClick={onClickGoRecord}>기록보기</button>

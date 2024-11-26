@@ -1,0 +1,95 @@
+.SideViewRecords {
+  margin-top: 48px;
+  width: 360px;
+  height: 800px;
+  position: fixed; 
+  z-index: 1;
+  right: 0;
+  background-color: white;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.sideViewRecords_container {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.sideViewRecords_container h4 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #00081D;
+  margin-top: 0.8rem;
+  margin-bottom: -10px;
+}
+
+.order_number {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #6B7283;
+  font-size: 0.9rem;
+}
+
+.order_number_time {
+  font-size: 0.8rem;
+  color: #6B7283;
+}
+
+.div_line {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-top: 0.2rem;
+  margin-bottom: 1rem;
+}
+
+.info_item {
+  background-color: #fff;
+  border: #E6E7EA 1px solid;
+  border-radius: 8px;
+  padding: 0.8rem;
+  font-size: 0.9rem;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.memo_section {
+  margin-top: -10px;
+}
+
+.memo_section h4 {
+  color: #00081D;
+}
+
+.memo_subtext {
+  font-size: 1rem;
+  color: #6B7283;
+  font-weight: bold;
+}
+
+.memo_input {
+  width: 310px;
+  height: 150px;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  padding: 0.8rem;
+  font-size: 0.9rem;
+  resize: none;
+  margin-bottom: 1rem;
+}
+
+.memo_save_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #9022FF;
+  color: white;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem;
+  cursor: pointer;
+  width: 100%;
+}
+
+.memo_save_button img {
+  margin-right: 0.5rem;
+}

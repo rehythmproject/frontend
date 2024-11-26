@@ -1,0 +1,161 @@
+.mainViewRecords {
+  margin-top: 48px;
+  width: 100%;
+  background-color: #FAFAFA;
+  padding-bottom: 300px;
+  position: fixed;
+}
+
+.mainViewRecords_title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mainViewRecords_title h3 {
+  margin-left: 1rem;
+}
+
+.mainViewRecords_title div {
+  color: #6B7283;
+  margin: 1rem 26rem;
+  font-size: 0.8rem;
+  padding-top: 0.6rem;
+}
+
+.mainViewRecords_container {
+  background-color: #FAFAFA;
+  border-radius: 12px;
+  border: solid 1px #E6E7EA;
+  margin-left: 1.5rem;
+  margin-right: 25rem;
+}
+
+.content_summary {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  font-weight: 600;
+  background-color: #fff;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  border-bottom: solid 1px #E6E7EA;
+}
+
+.content_summary h4 {
+  margin-left: 0.8rem;
+  font-size: 1.1rem;
+}
+
+.counter {
+  background-color: #F3E8FF;
+  color: #8B5CF6;
+  border-radius: 20px;
+  padding: 4px 8px;
+  font-size: 0.8rem;
+  margin-left: 0.6rem;
+}
+
+.content_select {
+  margin-left: 56rem;
+  cursor: pointer;
+}
+
+
+/* 테이블 스타일*/
+.table_name {
+  display: flex;
+  margin-top: 1rem;
+  margin-left: 0.8rem;
+}
+
+.table_name div {
+  display: flex;
+  margin-right: 2rem;
+}
+
+.table_container {
+  width: 100%;
+  border: 1px solid #E6E7EA;
+  background-color: #fff;
+  margin-top: 7rem;
+}
+
+.table_container tr:hover {
+  background-color: #F4E9FF;
+  border: 1px solid #9022FF;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+tbody td {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  color: #374151;
+}
+
+.record_modelName {
+  color: #6B7283;
+}
+
+.record_time {
+  color: #6B7283;
+}
+
+.record_status {
+  color: #9022FF;
+}
+
+/* 페이지네이션 스타일 */
+.pageMove {
+  display: flex;
+  background-color: #fff;
+}
+
+.page_info {
+  color: #6B7283;
+  margin-left: 10px;
+  margin-right: 45rem;
+} 
+
+.pagination button {
+  margin-top: 10px;
+  margin-right: 10px;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.page_move_button button {
+  margin-top: 10px;
+  padding: 2px 4px;
+  border: 1px solid #9022FF;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.page_move_button img {
+  margin-top: 1px;
+  margin-left: 1px;
+}
+
+.pagination_button {
+  margin: 0px;
+}
+
+.pagination button img {
+  width: 16px; 
+  height: auto;
+  margin: 0px;
+}
+
+.pagination .active {
+  background-color: #9022FF;
+  color: white;
+}
+

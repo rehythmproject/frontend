@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './PaymentCompleted.css';
+
 const PaymentCompleted = ({ onRetry, closePaymentCompleted }) => {
-    // 결제 상태를 관리하는 상태 변수
-    const [paymentStatus, setPaymentStatus] = useState('success'); // failure success
+  const [paymentStatus, setPaymentStatus] = useState('success'); // failure success
+
   useEffect(() => {
-    // 스크롤 비활성화
     document.body.style.overflow = 'hidden';
-    // 컴포넌트가 언마운트되면 스크롤 다시 활성화
+
     return () => {
       document.body.style.overflow = 'auto';
     };
@@ -44,16 +44,17 @@ const PaymentCompleted = ({ onRetry, closePaymentCompleted }) => {
               <h5>결제가 완료되었습니다!</h5>
               <p className="amount2">₩982.00</p>
             </div>
-        </div>
-        <p className="success-message">당신의 업무, 공부 도우미 ai 서비스가 결제 되었습니다! 실행 버튼을 <br />눌러 사용하면 됩니다!</p>
+          </div>
+          <p className="success-message">당신의 업무, 공부 도우미 ai 서비스가 결제 되었습니다! 실행 버튼을 <br />눌러 사용하면 됩니다!</p>
           <div className='payment-line'></div>
           <p className="payment-method">Payment Method <span>kakao Pay</span></p>
           <p className="payment-time">Payment Time <span>22/02/2024 10:15 AM</span></p>
-          <button className="retry-button">바로 실행하기</button>
+          <button className="retry-button">바로 실행하기</button> {/*실행이 진행되는 화면으로 이동만들어야함*/}
           <button className='close-button' onClick={handlePaymentCompletedClick}>닫기</button>
         </div>
-    ) : null}
+      ) : null}
     </div>
   );
 };
+
 export default PaymentCompleted;

@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import React from 'react';
 import './DateSelection.css'
 
@@ -9,7 +8,7 @@ const DateSelection = () => {
             <span style={{marginTop:'12px', margin:'8px'}}>Date</span>
         <div className="DateSelection">
             <input className="DateSelection_datebox" type="date" placeholder="placeholder"/>
-            <button className="DateSelection_botton"><img src="images/arrow-right.png"/></button>
+            <button className="DateSelection_botton"><img src="images/arrow-right.png" alt=''/></button>
         </div>
         </div>
     )
