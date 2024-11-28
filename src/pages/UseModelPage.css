@@ -19,6 +19,7 @@
 
 .usemodel_main{
     margin-top: 60px;
+    overflow-x: hidden;
 }
 
 .usemodel_list{
