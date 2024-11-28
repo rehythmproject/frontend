@@ -11,7 +11,7 @@ const Header = () => {
                         {({isActive}) => (
                         <li className='navi'>
                             <img src={isActive ? "/images/사용가능한모델2.png" : "/images/사용가능한모델.png"} alt='' style={{ width:'25px', height:'25px' }}/>
-                            <span className='navi_title' style={{color: isActive ? '#9022FF' : 'black'}}>사용가능한 모델</span>
+                            <span className='navi_title' style={{color: isActive ? '#9022FF' : 'black', fontWeight: 'bold'}}>사용가능한 모델</span>
                         </li>
                         )}
                     </NavLink>
@@ -19,7 +19,7 @@ const Header = () => {
                         {({isActive}) => (
                         <li className='navi'>
                             <img src={isActive ? "/images/사용한목록2.png" : "images/사용한목록.png"} alt='' style={{ width:'25px', height:'25px' }}/>
-                            <span className='navi_title' style={{color: isActive ? '#9022FF' : 'black'}}>사용한 목록</span>
+                            <span className='navi_title' style={{color: isActive ? '#9022FF' : 'black', fontWeight: 'bold'}}>사용한 목록</span>
                         </li>
                         )}
                     </NavLink>
