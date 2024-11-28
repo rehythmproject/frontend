@@ -1,5 +1,5 @@
 import './FourthSignup.css'
-import { signFormContext } from '../../pages/SignupPage';
+import {signFormContext} from '../../pages/SignupPage';
 import { useContext } from 'react';
 
 const FourthSignup = () => {

@@ -1,10 +1,10 @@
-import './FirstSignup.css'
+import './SecondSignup.css'
 import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { signFormContext } from '../../pages/SignupPage'
+import {signFormContext} from '../../pages/SignupPage';
 
 const SecondSignup = () => {
-  const {signData, setSignData} = useContext(signFormContext);
+  const {signData, setSignData, checkEmail} = useContext(signFormContext);
   
   const [cerconBtn, setCerconBtn] = useState(false);
   
@@ -19,14 +19,14 @@ const SecondSignup = () => {
     })
   }
   const handleCerconButton = () => {
-    if(email === ''){
+    if(signData.email === ''){
       alert('이메일을 입력해주세요.');
       return;
     }
-    if(!validateEmail(email)){
+    if(!validateEmail(signData.email)){
       setCerconBtn(false);
       alert('잘못된 이메일 형식입니다.');
-      setEmail('');
+      handleEmail('');
     }
     else {
       setCerconBtn(true);
@@ -38,7 +38,7 @@ const SecondSignup = () => {
     <div className="second_signup">
       <div className="sign_input">
         <label htmlFor="email" className='signup_label'>Email  <Link style={{marginLeft:'5px',fontSize:'13px', color: cerconBtn ? '#01B763' :'#CE7FFF', cursor:'pointer'}} onClick={handleCerconButton}>인증확인</Link><span style={{fontWeight:400, fontSize:'13px'}}>(클릭하면 해당 이메일로 인증메일이 발송됩니다.)</span></label>
-        <input type="text" id='email' className='signup_input' placeholder='ex) example@email.com' value={email} onChange={handleEmail}/>
+        <input type="text" id='email' className='signup_input' placeholder='ex) example@email.com' value={signData.email} onChange={handleEmail}/>
       </div>
     </div>
   );

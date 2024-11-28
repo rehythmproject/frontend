@@ -1,9 +1,9 @@
+import { useState } from "react";
 import Header from "../components/Header";
 import DateSelection from "../components/UseList/DateSelection";
 import SearchBox from "../components/UseList/SearchBox";
 import UseModelItem from "../components/UseList/UseModelItem";
 import './UseModelPage.css';
-
 const useModelList = [
     {
         title: '몬드리안 회사와 미팅',
@@ -34,9 +34,9 @@ const useModelList = [
         total: 124.00
     }
 ]
-
 const UseModelPage = () => {
-
+    const [searchBox, setSearchBox] = useState('');
+    const [searchDate, setSearchDate] = useState()
 
     return(
         <div className="UseModelPage">
@@ -45,12 +45,12 @@ const UseModelPage = () => {
                 <div className="usemodel_top">
                     <h3 style={{whiteSpace: 'nowrap'}}>사용한 목록</h3>
                     <div className="usemodel_top_right"> 
-                        <SearchBox />
-                        <DateSelection />
+                        <SearchBox searchBox={searchBox} setSearchBox={setSearchBox} />
+                        <DateSelection searchDate={searchDate} setSearchDate={setSearchDate} />
                     </div>
                 </div>
                 <div className="usemodel_main">
-                    <h3 style={{whiteSpace: 'nowrap', marginLeft:'30px'}}>모델 사용 기록들</h3>
+                    <h3 style={{whiteSpace: 'nowrap'}}>모델 사용 기록들</h3>
                     <div>
                         <ul className='usemodel_list' style={{padding:0}}>
                             {
@@ -61,10 +61,9 @@ const UseModelPage = () => {
                         </ul>
                     </div>
                 </div>
+                
             </div>
-            <Outlet />
         </div>
     )
 }
-
 export default UseModelPage;

@@ -1,6 +1,6 @@
 import './FirstSignup.css'
 import { useContext } from 'react';
-import { signFormContext } from '../../pages/SignupPage'
+import {signFormContext} from '../../pages/SignupPage';
 
 const FirstSignup = () => {
   const { signData, setSignData } = useContext(signFormContext);
