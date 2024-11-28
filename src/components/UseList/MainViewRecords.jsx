@@ -78,6 +78,14 @@ const MainViewRecords = () => {
       </div>
 
       <div className='mainViewRecords_container'>
+      <div className="content_summary">
+        <h4>핵심 내용 정리</h4>
+        <div className="counter">120</div>
+        <div className='content_select'>
+          <img src="/images/Vector.png" alt="선택" />
+        </div>
+      </div>
+      
         <div className='table_name'>
           <div>
             <div>모델명</div>

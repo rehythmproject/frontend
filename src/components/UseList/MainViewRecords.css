@@ -1,6 +1,5 @@
 .mainViewRecords {
-  margin-top: 48px;
-  width: 100%;
+  margin-top: 76px;
   background-color: #FAFAFA;
   padding-bottom: 300px;
   position: fixed;
@@ -56,7 +55,7 @@
 }
 
 .content_select {
-  margin-left: 56rem;
+  margin-left: 55.6rem;
   cursor: pointer;
 }
 
@@ -82,7 +81,7 @@
 
 .table_container tr:hover {
   background-color: #F4E9FF;
-  border: 1px solid #9022FF;
+  outline: 1px solid #9022FF;
 }
 
 table {
