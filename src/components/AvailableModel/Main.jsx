@@ -42,6 +42,12 @@ const recentItemList = [
     }
 ]
 
+const allModelList = [
+    {
+        
+    }
+]
+
 const Main = () => {
     const [category, setCategory] = useState('공부');
     const onClickCategory = (e) => {
