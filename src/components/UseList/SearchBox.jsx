@@ -3,6 +3,7 @@ import './SearchBox.css'
 const SearchBox = ({searchBox, setSearchBox}) => {
     const handleSearchBox = (e) => {
         setSearchBox(e.target.value);
+        console.log(searchBox);
     }
 
     return (
