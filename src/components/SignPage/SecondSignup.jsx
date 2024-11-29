@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 import {signFormContext} from '../../pages/SignupPage';
 
 const SecondSignup = () => {
-  const {signData, setSignData, checkEmail} = useContext(signFormContext);
+  const {signData, setSignData, checkEmail,setCurrentPage} = useContext(signFormContext);
+  setCurrentPage(1);
   
   const [cerconBtn, setCerconBtn] = useState(false);
   

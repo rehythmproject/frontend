@@ -9,7 +9,6 @@ const ViewRecords = () => {
   return (
     <div>
       <Header />
-      <p>Record Code: {code}</p>
       <div className='viewRecords-container'>
         <MainViewRecords />
         <SideViewRecords />

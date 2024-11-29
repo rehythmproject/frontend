@@ -1,7 +1,7 @@
 import './SignupButton.css';
 import { useNavigate } from 'react-router-dom';
 
-const SignupButton = ({handleNextPage, currentPage, pwd, rpwd, usernm, emailcheck, phoneCheck}) => {
+const SignupButton = ({handleNextPage, currentPage, pwd, rpwd, usernm, emailcheck, phoneCheck,setPostSignData}) => {
     const navigate = useNavigate();
 
     // const handleButtonClick = () => {
@@ -39,6 +39,8 @@ const SignupButton = ({handleNextPage, currentPage, pwd, rpwd, usernm, emailchec
             }else if(pwd !== rpwd){
                 alert('비밀번호가 일치하지 않습니다.');
                 return;
+            }else{
+                setPostSignData(true);//post요청 보내기
             }
         }
 
@@ -55,7 +57,6 @@ const SignupButton = ({handleNextPage, currentPage, pwd, rpwd, usernm, emailchec
         } else if (currentPage === 3) {
             navigate('finish');
         }
-        handleNextPage(); // 검증이 성공하면 handleNextPage 실행
         //총 페이지보다 적으면 현재 페이지 번호 + 1
     };
 

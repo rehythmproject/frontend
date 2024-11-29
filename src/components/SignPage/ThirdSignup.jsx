@@ -5,7 +5,8 @@ import {signFormContext} from '../../pages/SignupPage';
 
 
 const ThirdSignup = () => {
-  const { signData, setSignData,setPhone, checkPhone } = useContext(signFormContext);
+  const { signData, setSignData,setPhone, checkPhone,setCurrentPage } = useContext(signFormContext);
+  setCurrentPage(2);
   // const [,,,,,checkPhone] = useOutletContext();
   const check_num ='111111';
   //const [phone, setPhone] = useState('');
