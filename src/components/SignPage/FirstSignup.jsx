@@ -3,8 +3,9 @@ import { useContext } from 'react';
 import {signFormContext} from '../../pages/SignupPage';
 
 const FirstSignup = () => {
-  const { signData, setSignData } = useContext(signFormContext);
+  const { signData, setSignData, setCurrentPage } = useContext(signFormContext);
 
+  setCurrentPage(0);
   const handleUsername = (e) => {
     setSignData({
       ...signData,

@@ -36,7 +36,7 @@ const useModelList = [
 ]
 const UseModelPage = () => {
     const [searchBox, setSearchBox] = useState('');
-    const [searchDate, setSearchDate] = useState()
+    const [searchDate, setSearchDate] = useState('')
 
     return(
         <div className="UseModelPage">
@@ -54,7 +54,9 @@ const UseModelPage = () => {
                     <div>
                         <ul className='usemodel_list' style={{padding:0}}>
                             {
-                            useModelList.map((item) => (
+                            useModelList
+                                .filter((item) => (item.title.includes(searchBox) && item.date.includes(searchDate)))
+                                .map((item) => (
                                 <li key={item.code}><UseModelItem item={item} /></li>
                                 ))
                             }

@@ -2,6 +2,7 @@
 import "./ChangeButton.css";
 
 const ChangeButton = ({ changeButton, setChangeButton }) => {
+  const [changeButton, setChangeButton] = useState('정보추가');
   const onClickChangeButton = (e) => {
     setChangeButton(e.target.textContent);
   };
@@ -31,5 +32,6 @@ const ChangeButton = ({ changeButton, setChangeButton }) => {
     </div>
   );
 };
+
 
 export default ChangeButton;

@@ -42,6 +42,39 @@ const recentItemList = [
     }
 ]
 
+const allModelList = [
+    {
+        tag: '공부',
+        title: 'barum',
+        desc: '음성인식을 통해 외국어 발음 교정을 해줘요!'
+    },
+    {
+        tag: '회의',
+        title: 'delLa',
+        desc: '회의내용들을 분석해 회의 솔루션을 제공해요!'
+    },
+    {
+        tag: '회의',
+        title: 'yoyak',
+        desc: '긴 회의의 내용을 효율적으로 요약해줘요!'
+    },
+    {
+        tag: '업무',
+        title: 'toron',
+        desc: '토론 시 주제에 기반하는 근거자료들을 찾아줘요!'
+    },
+    {
+        tag: '업무',
+        title: 'dobi',
+        desc: '로드맵과 계획 날짜 등을 정리해줘요!'
+    },
+    {
+        tag: '회의',
+        title: 'bigyo',
+        desc: '회의의 문제점을 찾아 피드백을 제공해요!'
+    },
+]
+
 const Main = () => {
     const [category, setCategory] = useState('공부');
     const onClickCategory = (e) => {
@@ -66,11 +99,13 @@ const Main = () => {
             </div>
             <h2 className='main_title'>Model</h2>
             <ul className='model_list' style={{padding:0}}>
-                <li><ModelItem/></li>
-                <li><ModelItem/></li>
-                <li><ModelItem/></li>
-                <li><ModelItem/></li>
-                <li><ModelItem/></li>
+                {
+                    allModelList
+                    .filter((item)=>item.tag == category)
+                    .map((item)=>(
+                        <li><ModelItem tag={item.tag} title={item.title} desc={item.desc}/></li>
+                    ))
+                }
             </ul>
         </div>
     );

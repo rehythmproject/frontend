@@ -3,7 +3,8 @@ import {signFormContext} from '../../pages/SignupPage';
 import { useContext } from 'react';
 
 const FourthSignup = () => {
-  const {signData, setSignData} = useContext(signFormContext);
+  const {signData, setSignData,setCurrentPage} = useContext(signFormContext);
+  setCurrentPage(3);
 
   const handlePwd = (e) => {
     setSignData({

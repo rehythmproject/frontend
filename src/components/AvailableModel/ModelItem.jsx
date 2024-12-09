@@ -1,6 +1,6 @@
 import './ModelItem.css'
 
-const ModelItem = () => {
+const ModelItem = ({title, desc}) => {
     return(
         <div className="model_item">
             <div className="model_main">
@@ -8,8 +8,8 @@ const ModelItem = () => {
                     <img src="/images/delLa.png" alt="delLa" style={{width:'110px', borderRadius: '10px'}} />
                 </div>
                 <div className='model_detail'>
-                    <p className='model_title'>delLa</p>
-                    <p className='model_desc'>공부할 내용을 AI에게 설명하면 로드맵을 생성해줘요!</p>
+                    <p className='model_title'>{title}</p>
+                    <p className='model_desc'>{desc}</p>
                     <p className='model_desc2'>12 Available ⦁ 6 Sold</p>
                 </div>
             </div>

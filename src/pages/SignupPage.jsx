@@ -6,6 +6,8 @@ import SignBack from '../components/SignBack';
 import SignupTitle from '../components/SignPage/SignupTitle';
 import SignupButton from '../components/SignPage/SignupButton';
 import SocialLogin from '../components/SignPage/SocialLogin';
+import axios from 'axios';
+import apiServer from '../utils/API';
 
 export const signFormContext = createContext();
 
@@ -18,21 +20,13 @@ function SignupPage() {
     pwd: '',
     rpwd: ''
   });
-  //일단 냅다 박음, 나중에 progress 부분 수정 필요
+
   const [currentPage, setCurrentPage] = useState(0);//첫 페이지
   const totalPage = 4;//전체 페이지 수
 
   const [emailcheck, setEmailcheck] = useState(false);
   const [phoneCheck, setPhoneCheck] = useState(false);
-
-  const handleNextPage = () => {//토탈보다 적으면 현재페이지 +1
-    console.log(currentPage);
-    if(currentPage < totalPage){
-      setCurrentPage(currentPage + 1);
-    }
-  };
-
-  
+  const [postSignData, setPostSignData] = useState(false);  
 
   const checkEmail = (check) => {
     setEmailcheck(check);
@@ -40,6 +34,24 @@ function SignupPage() {
 
   const checkPhone = (check) => {
     setPhoneCheck(check);
+  }
+
+  const sendData = async () => {
+    try{
+      const post = await apiServer.post('/auth/signup', {
+          usernm: signData.usernm,
+          useremail: signData.email,
+          phone: signData.phone,
+          password: signData.pwd
+      })
+    }
+    catch(error){
+      console.log(error);
+    }
+  }
+
+  if(postSignData){
+    sendData();
   }
 
 
@@ -53,7 +65,7 @@ function SignupPage() {
         <div className='signup_right_items'>
           <div className='sign_input_container'>
             <Outlet />
-            <SignupButton handleNextPage={handleNextPage} currentPage={currentPage}/>
+            <SignupButton currentPage={currentPage}/>
           </div>
         </div>
         </div>
@@ -70,7 +82,7 @@ function SignupPage() {
           <SignupTitle />
           <div className='sign_input_container'>
             <Outlet/>
-            <SignupButton handleNextPage={handleNextPage} currentPage={currentPage} pwd={currentPage === 3 ? signData.pwd : ''} rpwd={currentPage === 3 ? signData.rpwd : ''} usernm={signData.usernm} emailcheck={emailcheck} phoneCheck={phoneCheck} />
+            <SignupButton currentPage={currentPage} pwd={currentPage === 3 ? signData.pwd : ''} rpwd={currentPage === 3 ? signData.rpwd : ''} usernm={signData.usernm} emailcheck={emailcheck} phoneCheck={phoneCheck} setPostSignData={setPostSignData}/>
             <SocialLogin />
           </div>
         </div>

@@ -1,6 +1,7 @@
 .usemodel_compo_container {
     overflow-y: auto;
     background-color: #FAFAFA;
+    min-height: 725px;
     padding-left: 18px;
     padding-right: 18px;
 }
