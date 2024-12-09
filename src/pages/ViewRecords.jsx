@@ -16,5 +16,5 @@ const ViewRecords = () => {
     </div>
   )
 }
-
+//응애
 export default ViewRecords;
