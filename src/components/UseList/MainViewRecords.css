@@ -1,6 +1,5 @@
 .mainViewRecords {
-  margin-top: 48px;
-  width: 100%;
+  margin-top: 76px;
   background-color: #FAFAFA;
   padding-bottom: 300px;
   position: fixed;
@@ -28,6 +27,7 @@
   border: solid 1px #E6E7EA;
   margin-left: 1.5rem;
   margin-right: 25rem;
+  width: 73vw;
 }
 
 .content_summary {
@@ -44,6 +44,7 @@
 .content_summary h4 {
   margin-left: 0.8rem;
   font-size: 1.1rem;
+  width: 184px;
 }
 
 .counter {
@@ -55,22 +56,21 @@
   margin-left: 0.6rem;
 }
 
-.content_select {
-  margin-left: 56rem;
-  cursor: pointer;
-}
-
-
 /* 테이블 스타일*/
 .table_name {
   display: flex;
   margin-top: 1rem;
   margin-left: 0.8rem;
+  width: auto;
 }
 
 .table_name div {
   display: flex;
-  margin-right: 2rem;
+  margin-right: 38px;
+}
+
+.table_name_div {
+  width: 336px;
 }
 
 .table_container {
@@ -82,7 +82,7 @@
 
 .table_container tr:hover {
   background-color: #F4E9FF;
-  border: 1px solid #9022FF;
+  outline: 1px solid #9022FF;
 }
 
 table {
@@ -94,6 +94,7 @@ tbody td {
   padding: 15px;
   border-bottom: 1px solid #ddd;
   color: #374151;
+  width: 240px;
 }
 
 .record_modelName {
@@ -117,7 +118,7 @@ tbody td {
 .page_info {
   color: #6B7283;
   margin-left: 10px;
-  margin-right: 45rem;
+  margin-right: 750px;
 } 
 
 .pagination button {
@@ -158,4 +159,6 @@ tbody td {
   background-color: #9022FF;
   color: white;
 }
+
+
 

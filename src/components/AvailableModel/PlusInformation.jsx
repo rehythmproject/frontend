@@ -13,12 +13,9 @@ const PlusInformation = () => {
 
   return (
       <div className='information-maindiv'>
-        <h4 className='information-h4'>추가적인 정보 적기</h4>
-        <input className='write-input' type="text" placeholder=" 작성" />
-        <div className='write-div'>
-          <input className='write-input' type="text" placeholder=" 더 작성하기"/>
-          <button className='write-button'><img src="./images/arrow-right.png" alt="아래표시" /></button>
-        </div>
+        <h4 className='information-h4'>회의/공부 내용 작성</h4>
+        <input className='write-input' type="text" placeholder=" 제목작성 (16자이내)" maxLength={16}/>
+          <input className='write-input' type="text" placeholder="회의목적작성"/>
       
         <button className="add-button" onClick={openInformation}>
           <div className='add-div'>

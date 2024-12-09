@@ -10,10 +10,6 @@
   margin-bottom: 10px;
 }
   
-.write-div {
-  position: relative;
-}
-  
 .write-input {
   width: 300px;
   height: 32px;
@@ -23,16 +19,7 @@
   padding-left: 10px;
   font-size: 12px;
 }
-  
-.write-button {
-  position: absolute;
-  width: 16px;
-  top: 8px; 
-  right: 20px;
-  background: transparent; /* 배경 투명 */
-  border: none;
-  cursor: pointer;
-}
+
 .add-button{
   width : 316px; 
   height: 32px; 

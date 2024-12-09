@@ -13,7 +13,7 @@ const RecentModelItem = ({item}) => {
         <div className='recent_item'>
             <div className='title'>
                 <p style={{fontWeight:'bold', fontSize:'18px', marginTop: '3px'}}>{item.title}</p>
-                <span className='model_code'>{item.code}</span>
+                <span className='model_code'>#{item.code}</span>
             </div>
             <p style={{color:'#969BA7'}}>{item.desc}</p>
             <div className="tag" style={current_tag_style}>{item.model_tag}</div>

@@ -6,37 +6,37 @@ import { useState } from 'react';
 const recentItemList = [
     {
         title: 'oliva',
-        code: '#12532',
+        code: '12532',
         desc: '3 Items ⦁ Table 4A',
         model_tag: '업무'
     },
     {
         title: 'delLa',
-        code: '#17332',
+        code: '17332',
         desc: '3 Items ⦁ Table 8B',
         model_tag: '공부'
     },
     {
         title: 'Kylian',
-        code: '#12531',
+        code: '12531',
         desc: '12 Items ⦁ Table 2C',
         model_tag: '회의'
     },
     {
         title: 'baleum',
-        code: '#12345',
+        code: '12345',
         desc: '12 Items ⦁ 6 Sold',
         model_tag: '공부'
     },
     {
         title: 'baleum',
-        code: '#12345',
+        code: '12346',
         desc: '12 Items ⦁ 6 Sold',
         model_tag: '공부'
     },
     {
         title: 'baleum',
-        code: '#12345',
+        code: '12347',
         desc: '12 Items ⦁ 6 Sold',
         model_tag: '공부'
     }

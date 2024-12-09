@@ -43,6 +43,8 @@ const MainViewRecords = () => {
 
   const [currentPage, setCurrentPage] = useState(1);
   const [currentGroup, setCurrentGroup] = useState(0); // 페이지 그룹
+  const [selectedRecord, setSelectedRecord] = useState(null);
+
   const recordsPerPage = 4;
   const pagesPerGroup = 4;
 
@@ -70,6 +72,10 @@ const MainViewRecords = () => {
     }
   };
 
+  const handleRecordClick = (record) => {
+    setSelectedRecord(record);
+  };
+
   return (
     <div className='mainViewRecords'>
       <div className='mainViewRecords_title'>
@@ -78,12 +84,17 @@ const MainViewRecords = () => {
       </div>
 
       <div className='mainViewRecords_container'>
+      <div className="content_summary">
+        <h4>북마크한 주요 내용들 ..</h4>
+        <div className="counter">120</div>
+      </div>
+      
         <div className='table_name'>
-          <div>
+          <div className='table_name_div'>
             <div>모델명</div>
             <img src="/images/chevron-up-down.png" alt="↕️" />
           </div>
-          <div>
+          <div className='table_name_div'>
             <div>Date/Time</div>
             <img src="/images/chevron-up-down.png" alt="↕️" />
           </div>
@@ -109,8 +120,8 @@ const MainViewRecords = () => {
             <p>Page {currentPage} of {totalPages}</p>
           </div>
           <div className='pagination'>
-            <button onClick={handlePreviousGroup} disabled={currentGroup === 0}>
-              이전
+            <button onClick={handlePreviousGroup} disabled={currentGroup === 0} className='pagination_button'>
+              <img src="/images/chevron-double-left.png" alt='이전' />
             </button>
             {Array.from({ length: Math.min(pagesPerGroup, totalPages - currentGroup * pagesPerGroup) }, (_, index) => {
               const pageNumber = currentGroup * pagesPerGroup + index + 1;
@@ -125,7 +136,7 @@ const MainViewRecords = () => {
               );
             })}
             <button className='pagination_button' onClick={handleNextGroup} disabled={currentGroup === totalGroups - 1}>
-              <img src="/images/chevron-double-right.png" alt="다음 그룹" />
+              <img src="/images/chevron-double-right.png" alt="다음" />
             </button>
           </div>
         </div>
