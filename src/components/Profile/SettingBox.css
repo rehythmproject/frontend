@@ -1,0 +1,57 @@
+.SettingBox{
+    background-color: white;
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #E6E7EA;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.input_container{
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+.profile_input label {
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.profile_input input {
+    border: 1px solid #E6E7EA;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.profile_input{
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+    width: 100%;
+}
+
+.profile_button{
+    background-color: white;
+    border: 1px solid #E6E7EA;
+    border-radius: 30px;
+    padding: 8px;
+    width: 150px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.profile_button.submit{
+    background-color: #9022FF;
+    color: white;
+}
+
+@media (max-width:800px) {
+    .input_container{
+        flex-direction: column;
+    }
+
+    .profile_button{
+        width: 40%;
+    }
+}
