@@ -42,9 +42,9 @@
 }
 
 .content_summary h4 {
-  margin-left: 0.8rem;
-  font-size: 1.1rem;
-  width: 184px;
+  margin-left: 29rem;
+  font-size: 1.2rem;
+  width: 212px;
 }
 
 .counter {
@@ -53,7 +53,7 @@
   border-radius: 20px;
   padding: 4px 8px;
   font-size: 0.8rem;
-  margin-left: 0.6rem;
+  margin-left: 0px;
 }
 
 /* 테이블 스타일*/
@@ -83,6 +83,7 @@
 .table_container tr:hover {
   background-color: #F4E9FF;
   outline: 1px solid #9022FF;
+  cursor: pointer;
 }
 
 table {
@@ -121,42 +122,53 @@ tbody td {
   margin-right: 750px;
 } 
 
-.pagination button {
-  margin-top: 10px;
-  margin-right: 10px;
-  padding: 8px 12px;
-  border: 1px solid #ddd;
-  background-color: white;
-  cursor: pointer;
-  border-radius: 50%;
-}
-
-.page_move_button button {
-  margin-top: 10px;
-  padding: 2px 4px;
-  border: 1px solid #9022FF;
-  background-color: white;
-  cursor: pointer;
-  border-radius: 50%;
-}
-
-.page_move_button img {
-  margin-top: 1px;
-  margin-left: 1px;
+.pagination {
+  display: flex; 
+  align-items: center;
+  justify-content: center;
 }
 
 .pagination_button {
-  margin: 0px;
+  margin-top: 5px;
+  margin-right: 10px;
+  padding: 8px 12px;
+  border: 2px solid #E6E7EA;
+  background-color: white;
+  cursor: pointer;
+  display: flex;
+  border-radius: 50%;
+  align-items: center;
 }
 
-.pagination button img {
-  width: 16px; 
-  height: auto;
-  margin: 0px;
+.pagination_number {
+  width: 40px;
+  height: 40px;
+  font-size: 16px;
+  text-align: center;
 }
+
+.pagination_arrow_button {
+  width: 36px;
+  height: 36px;
+  font-size: 24px;
+  align-items: center; 
+  justify-content: center;
+  padding: 8px 12px 12px; 
+  text-align: center;
+}
+
+.pagination_button div {
+  color: #9022FF;
+}
+
+.pagination_button:hover {
+  border: #9022FF solid 2px;
+}
+
 
 .pagination .active {
   background-color: #9022FF;
+  border: #9022FF solid 1px;
   color: white;
 }
 

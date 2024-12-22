@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import './MainViewRecords.css';
 
 const MainViewRecords = () => {
+  const navigate = useNavigate();
+  const { code } = useParams(); 
+
   const records = [
     { modelName: 'deLLa', time: '10:00 AM', status: '프로젝트 관련' },
     { modelName: 'baleum', time: '09:35 PM', status: '개발 스택에 관해 논의' },
@@ -42,15 +47,13 @@ const MainViewRecords = () => {
   ];
 
   const [currentPage, setCurrentPage] = useState(1);
-  const [currentGroup, setCurrentGroup] = useState(0); // 페이지 그룹
-  const [selectedRecord, setSelectedRecord] = useState(null);
-
-  const recordsPerPage = 4;
+  const [currentGroup, setCurrentGroup] = useState(0);
+  
   const pagesPerGroup = 4;
+  const recordsPerPage = 4;
 
   // 총 페이지 수 계산
   const totalPages = Math.ceil(records.length / recordsPerPage);
-  const totalGroups = Math.ceil(totalPages / pagesPerGroup);
 
   const indexOfLastRecord = currentPage * recordsPerPage;
   const indexOfFirstRecord = indexOfLastRecord - recordsPerPage;
@@ -59,21 +62,28 @@ const MainViewRecords = () => {
   const handleClick = (pageNumber) => setCurrentPage(pageNumber);
 
   const handleNextGroup = () => {
-    if (currentGroup < totalGroups - 1) {
-      setCurrentGroup(currentGroup + 1);
-      setCurrentPage((currentGroup + 1) * pagesPerGroup + 1); // 다음 그룹의 첫 번째 페이지로 이동
+    if (currentPage < totalPages) {
+      setCurrentPage(currentPage + 1);
+
+      if (currentPage % pagesPerGroup === 0) {
+        setCurrentGroup(currentGroup + 1);
+      }
     }
   };
-
+  
   const handlePreviousGroup = () => {
-    if (currentGroup > 0) {
-      setCurrentGroup(currentGroup - 1);
-      setCurrentPage(currentGroup * pagesPerGroup); // 이전 그룹의 마지막 페이지로 이동
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+
+      if ((currentPage - 1) % pagesPerGroup === 0) {
+        setCurrentGroup(currentGroup - 1);
+      }
     }
   };
 
   const handleRecordClick = (record) => {
-    setSelectedRecord(record);
+    console.log(`Navigating with record: ${record.modelName}`);
+    navigate(`/useModelPage/UsageListContentsPage/${code}`); 
   };
 
   return (
@@ -105,7 +115,7 @@ const MainViewRecords = () => {
           <table>
             <tbody>
               {currentRecords.map((record, index) => (
-                <tr key={index}>
+                <tr key={index} onClick={() => handleRecordClick(record)}>
                   <td className='record_modelName'>{record.modelName}</td>
                   <td className='record_time'>{record.time}</td>
                   <td className='record_status'>{record.status}</td>
@@ -120,23 +130,25 @@ const MainViewRecords = () => {
             <p>Page {currentPage} of {totalPages}</p>
           </div>
           <div className='pagination'>
-            <button onClick={handlePreviousGroup} disabled={currentGroup === 0} className='pagination_button'>
-              <img src="/images/chevron-double-left.png" alt='이전' />
+            <button onClick={handlePreviousGroup} disabled={currentPage === 1} className='pagination_button pagination_arrow_button'>
+              <div>«</div>
             </button>
-            {Array.from({ length: Math.min(pagesPerGroup, totalPages - currentGroup * pagesPerGroup) }, (_, index) => {
-              const pageNumber = currentGroup * pagesPerGroup + index + 1;
-              return (
-                <button
-                  key={pageNumber}
-                  onClick={() => handleClick(pageNumber)}
-                  className={currentPage === pageNumber ? 'active' : ''}
-                >
-                  {pageNumber}
-                </button>
-              );
-            })}
-            <button className='pagination_button' onClick={handleNextGroup} disabled={currentGroup === totalGroups - 1}>
-              <img src="/images/chevron-double-right.png" alt="다음" />
+            {Array.from(
+              { length: Math.min(pagesPerGroup, totalPages - currentGroup * pagesPerGroup) }, (_, index) => {
+                const pageNumber = currentGroup * pagesPerGroup + index + 1;
+                return (
+                  <button
+                    key={pageNumber}
+                    onClick={() => handleClick(pageNumber)}
+                    className={`pagination_button number_button ${currentPage === pageNumber ? 'active' : ''}`}
+                  >
+                    {pageNumber}
+                  </button>
+                );
+              }
+            )}
+            <button className='pagination_button pagination_arrow_button' onClick={handleNextGroup} disabled={currentPage === totalPages}>
+              <div>»</div>
             </button>
           </div>
         </div>
