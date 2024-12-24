@@ -1,6 +1,21 @@
+import { useRef } from 'react'
 import './ModelItem.css'
 
-const ModelItem = ({title, desc}) => {
+const ModelItem = ({Id, tag, title, desc, price, handleAddModel}) => {
+    
+    const data = {
+        id: Id.current,
+        tag: tag,
+        title: title,
+        desc: desc,
+        price: price
+    }
+
+    const onclickPlus = () => {
+        Id.current += 1;
+        handleAddModel({data});
+    }
+    
     return(
         <div className="model_item">
             <div className="model_main">
@@ -14,8 +29,8 @@ const ModelItem = ({title, desc}) => {
                 </div>
             </div>
             <div className='model_bottom'>
-                <p className='model_price_unit'>₩<span className='model_price'>100</span></p>
-                <button className='model_add'>+</button>
+                <p className='model_price_unit'>₩<span className='model_price'>{price}</span></p>
+                <button className='model_add' onClick={()=>onclickPlus()}>+</button>
             </div>
             
         </div>

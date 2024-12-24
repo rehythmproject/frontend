@@ -9,7 +9,7 @@ const SettingBox = ({title, type, desc}) => {
             </div>
             <form action="">
         {
-            type == 'profile' ? (
+            type === 'profile' ? (
                 <div className="input_container">
                     <div className="profile_input">
                         <label htmlFor="name">Name</label>

@@ -3,9 +3,10 @@ import './TotalAmount.css';
 import PaymentMethod from './PaymentMethod';
 import PaymentCompleted from './PaymentCompleted';
 
-const TotalAmount = () => {
+const TotalAmount = ({totalPrice}) => {
   const [orderPayment, setOrderPayment] = useState(false);
   const [isPaymentCompleted, setIsPaymentCompleted] = useState(false);
+  const salePrice = totalPrice * 0.00;
 
   useEffect(() => {
     if (orderPayment) {
@@ -43,16 +44,16 @@ const TotalAmount = () => {
         <div className='alltotal-div'>
           <div className='amount-div'>
             <li className='total-label'>총금액</li>
-            <li className='total-amount'>₩250</li>
+            <li className='total-amount'>₩{totalPrice}</li>
           </div>
           <div className='amount-div'>
             <li className='total-label'>할인률(0%)</li>
-            <li className='total-amount'>₩250</li>
+            <li className='total-amount'>₩{salePrice}</li>
           </div>
           <hr className='total-hr'/>
           <div className='total-div'>
             <li className='total'>Total</li>
-            <li className='totalmoney'>₩250</li>
+            <li className='totalmoney'>₩{totalPrice-salePrice}</li>
           </div>
           <button className='start-button' onClick={openPayment}>start !</button>
         </div>

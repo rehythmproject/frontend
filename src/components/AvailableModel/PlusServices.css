@@ -63,3 +63,13 @@
   .money-div{
     font-size: 1.1rem;
   }
+
+  .keepModel_container{
+    height: 170px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .keepModel_container::-webkit-scrollbar{
+    display: none;
+  }

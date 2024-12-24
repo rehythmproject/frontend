@@ -46,36 +46,42 @@ const allModelList = [
     {
         tag: '공부',
         title: 'barum',
-        desc: '음성인식을 통해 외국어 발음 교정을 해줘요!'
+        desc: '음성인식을 통해 외국어 발음 교정을 해줘요!',
+        price: 100
     },
     {
         tag: '회의',
         title: 'delLa',
-        desc: '회의내용들을 분석해 회의 솔루션을 제공해요!'
+        desc: '회의내용들을 분석해 회의 솔루션을 제공해요!',
+        price: 100
     },
     {
         tag: '회의',
         title: 'yoyak',
-        desc: '긴 회의의 내용을 효율적으로 요약해줘요!'
+        desc: '긴 회의의 내용을 효율적으로 요약해줘요!',
+        price: 100
     },
     {
         tag: '업무',
         title: 'toron',
-        desc: '토론 시 주제에 기반하는 근거자료들을 찾아줘요!'
+        desc: '토론 시 주제에 기반하는 근거자료들을 찾아줘요!',
+        price: 100
     },
     {
         tag: '업무',
         title: 'dobi',
-        desc: '로드맵과 계획 날짜 등을 정리해줘요!'
+        desc: '로드맵과 계획 날짜 등을 정리해줘요!',
+        price: 100
     },
     {
         tag: '회의',
         title: 'bigyo',
-        desc: '회의의 문제점을 찾아 피드백을 제공해요!'
+        desc: '회의의 문제점을 찾아 피드백을 제공해요!',
+        price: 100
     },
 ]
 
-const Main = () => {
+const Main = ({handleAddModel,Id}) => {
     const [category, setCategory] = useState('공부');
     const onClickCategory = (e) => {
         setCategory(e.target.textContent);
@@ -87,7 +93,7 @@ const Main = () => {
             <ul className='recent_list' style={{padding:0}}>
                 {
                     recentItemList.map((item) => (
-                        <li key={item.code}><RecentModelItem item={item} /></li>
+                        <li key={item}><RecentModelItem item={item} /></li>
                     ))
                 }
             </ul>
@@ -103,7 +109,7 @@ const Main = () => {
                     allModelList
                     .filter((item)=>item.tag == category)
                     .map((item)=>(
-                        <li><ModelItem tag={item.tag} title={item.title} desc={item.desc}/></li>
+                        <li><ModelItem Id={Id} tag={item.tag} title={item.title} desc={item.desc} price={item.price} handleAddModel={handleAddModel}/></li>
                     ))
                 }
             </ul>
