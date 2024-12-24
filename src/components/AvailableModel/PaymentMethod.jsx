@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './PaymentMethod.css';
 import QRCode from './QRCode';
 
-const PaymentMethod = ({ closePayment, setIsPaymentCompleted }) => {
+const PaymentMethod = ({ totalPrice,closePayment, setIsPaymentCompleted }) => {
   const [selectedMethod, setSelectedMethod] = useState('toss');
 
   const handleClick = (method) => {
@@ -44,7 +44,7 @@ const PaymentMethod = ({ closePayment, setIsPaymentCompleted }) => {
         <div className="inputAmount">
           <h4>Amount</h4>
           <div className="inputAmount-display">
-            <input type="text" value="₩982.00" readOnly />
+            <input type="text" value={`₩${totalPrice}`} readOnly />
           </div>
           
           <button className="submit-button" onClick={handlePaymentClick}>결제하기</button>
