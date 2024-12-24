@@ -8,6 +8,7 @@ import FourthSignup from './components/SignPage/FourthSignup';
 import EndSignup from './components/SignPage/EndSignup';
 import LoginPage from './pages/LoginPage';
 import AvailableModel from './pages/AvailableModel';
+import Profile from './pages/Profile';
 import UseModelPage from './pages/UseModelPage';
 import ViewRecords from './pages/ViewRecords';
 import UsageListContentsPage from './pages/UsageListContentsPage';
@@ -17,7 +18,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Navigate to="/auth/login" replace />} />
-        <Route path='auth' >
+        <Route path='auth'>
           <Route path='login' element={<LoginPage />} />
           <Route path='signup' element={<SignupPage/>}>
             <Route path='step1' element={<FirstSignup/>} />
@@ -28,6 +29,7 @@ function App() {
           </Route>
         </Route>
 
+        <Route path='profile' element={<Profile />} />
         <Route path='availableModel' element={<AvailableModel />}/>
         <Route path='useModelPage' element={<UseModelPage />} />
         <Route path='useModelPage/viewRecords/:code' element={<ViewRecords />}/>

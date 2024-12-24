@@ -96,12 +96,19 @@
   border-color: #E6E7EA;
   border-width: 0.01rem;
   margin-bottom: 15px;
+  overflow-y: auto;
 }
+
 .data-div p {
   padding-left: 8px;
   color: #969BA7;
-  font-size: 0.8rem;
+  font-size: 13px;
 }
+
+.data-div .data_div_title {
+  font-size: 14px;
+}
+
 .information-cancel-button{
   width: 195px;
   height: 40px;

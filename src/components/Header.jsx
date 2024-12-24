@@ -1,5 +1,5 @@
 import './Header.css';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const Header = () => {
     return (
@@ -23,28 +23,12 @@ const Header = () => {
                         </li>
                         )}
                     </NavLink>
-                    <NavLink style={{textDecoration:'none'}}>
-                        {({isActive}) => (
-                        <li className='navi'>
-                            <img src={isActive ? "/images/사용기록2.png" : "/images/사용기록.png"} alt='' style={{ width:'23px', height:'23px' }}/>
-                            <span className='navi_title' style={{color: isActive ? '#9022FF' : 'black'}}>사용기록</span>
-                        </li>
-                        )}
-                    </NavLink>
-                    <NavLink style={{textDecoration:'none'}}>
-                        {({isActive}) => (
-                        <li className='navi'>
-                            <img src={isActive ? "/images/금액2.png" : "/images/금액.png"} alt='' style={{ width:'23px', height:'23px' }}/>
-                            <span className='navi_title' style={{color: isActive ? '#9022FF' : 'black'}}>금액</span>
-                        </li>
-                        )}
-                    </NavLink>
                 </ul>
             </div>
             <div className="setup_container">
                 <ul className="setup_list">
-                    <li className="setup_item"><img src="./images/bell.png" alt="" /></li>
-                    <li className="setup_item"><img src="./images/profile.png" alt="" /></li>
+                    <li className="setup_item"><img src="/images/bell.png" alt="" /></li>
+                    <li className="setup_item"><Link to="/profile"><img src="/images/profile.png" alt="프로필" /></Link></li>
                 </ul>
             </div>
         </div>

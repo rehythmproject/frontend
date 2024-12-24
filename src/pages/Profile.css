@@ -1,0 +1,125 @@
+.profile_container{
+    background-color: #FAFAFA;
+    min-height: 725px;
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-top: 80px;
+}
+
+.recharts-wrapper{
+    width: 400px;
+}
+
+.recharts-default-legend{
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+}
+
+
+.chart_legend{
+    display: flex;
+    flex-direction: row;
+    width: 10px;
+}
+
+.recharts-legend-item-text {
+    color: black; /* 글자 색상 검정 */
+    fill: black;
+    font-size: 12px; /* 글자 크기 조정 */
+}
+
+.profile_contents{
+    display: flex;
+    justify-content: space-between;
+}
+
+.setting{
+    width: 100%;
+    margin-right: 50px;
+}
+
+@media (max-width:550px) {
+    .chart{
+        display: none;
+    }
+    .setting{
+        margin-right: 40px;
+    }
+    .profile_contents{
+        display: flex;
+        justify-content: center;
+        margin: auto;
+    }
+}
+
+.use_field{
+    background-color: white;
+    border: 1px solid #E6E7EA;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    padding: 5px;
+}
+
+.use_model{
+    background-color: white;
+    border: 1px solid #E6E7EA;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.use_model table {
+    border: none;   
+}
+
+tr{
+    border-top: 0.5px solid #E6E7EA;
+}
+
+
+.use_model_item{
+    display: flex;
+    background-color: white;
+}
+
+.use_model_img{
+    width: 45px;
+    height: 45px;
+    margin: 10px;
+}
+
+.info{
+    overflow-x: hidden;
+    width: 90px;
+}
+
+.info p{
+    margin: 0;
+}
+
+.info .title{
+    margin-top: 13px;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.info .order{
+    font-size: 12px;
+}
+
+.order span {
+    color: #9022FF;
+}
+
+.ratio {
+    margin-left: 45px;
+    margin-top: 15px;
+    background-color: #E5F5F2;
+    color: #01703C;
+    border-radius: 30px;
+    padding: 5px;
+    width: 55px;
+    display: flex;
+    justify-content: center;
+}

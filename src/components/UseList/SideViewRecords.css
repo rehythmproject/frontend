@@ -100,3 +100,9 @@
 .memo_save_button img {
   margin-right: 0.5rem;
 }
+
+@media (max-width:1250px) {
+  .SideViewRecords{
+      display: none;
+  }
+}
