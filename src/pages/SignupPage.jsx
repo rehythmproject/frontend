@@ -7,7 +7,7 @@ import SignupTitle from '../components/SignPage/SignupTitle';
 import SignupButton from '../components/SignPage/SignupButton';
 import SocialLogin from '../components/SignPage/SocialLogin';
 import axios from 'axios';
-import apiServer from '../utils/API';
+import Server from '../utils/API';
 
 export const signFormContext = createContext();
 
@@ -26,7 +26,6 @@ function SignupPage() {
 
   const [emailcheck, setEmailcheck] = useState(false);
   const [phoneCheck, setPhoneCheck] = useState(false);
-  const [postSignData, setPostSignData] = useState(false);  
 
   const checkEmail = (check) => {
     setEmailcheck(check);
@@ -37,27 +36,25 @@ function SignupPage() {
   }
 
   const sendData = async () => {
-    try{
-      const post = await apiServer.post('/auth/signup', {
-          usernm: signData.usernm,
-          useremail: signData.email,
-          phone: signData.phone,
-          password: signData.pwd
+      const signup = Server.post('/auth/signup', {
+          'username': signData.usernm,
+          'password': signData.pwd,
+          'useremail': signData.email,
+          'phone': signData.phone,
       })
-    }
-    catch(error){
-      console.log(error);
-    }
+      .then((req) => {
+        console.log(req.data);
+      })
+      .catch((req) => {
+        console.log(req.error);
+      })
   }
 
-  if(postSignData){
-    sendData();
-  }
 
 
 
   return (
-    <signFormContext.Provider value={{signData, setSignData, checkEmail, checkPhone, setCurrentPage }}>
+    <signFormContext.Provider value={{signData, setSignData, checkEmail, checkPhone, setCurrentPage, sendData }}>
     {currentPage === 4 ? (//마지막 페이지일때
       <div className="signup_page">
         <div className="signup_main">
@@ -82,7 +79,7 @@ function SignupPage() {
           <SignupTitle />
           <div className='sign_input_container'>
             <Outlet/>
-            <SignupButton currentPage={currentPage} pwd={currentPage === 3 ? signData.pwd : ''} rpwd={currentPage === 3 ? signData.rpwd : ''} usernm={signData.usernm} emailcheck={emailcheck} phoneCheck={phoneCheck} setPostSignData={setPostSignData}/>
+            <SignupButton currentPage={currentPage} pwd={currentPage === 3 ? signData.pwd : ''} rpwd={currentPage === 3 ? signData.rpwd : ''} usernm={signData.usernm} emailcheck={emailcheck} phoneCheck={phoneCheck} sendData={sendData}/>
             <SocialLogin />
           </div>
         </div>

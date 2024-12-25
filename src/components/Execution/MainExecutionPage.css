@@ -1,0 +1,77 @@
+.MainExecutionPage {
+  margin-top: 76px;
+  background-color: #FAFAFA;
+  width: 1176px;
+  height: 100%;
+  position: fixed;
+}
+
+.mainExecutionPage_title {
+  margin-left: 16px;
+}
+
+.mainExecutionPage_container {
+  background-color: #FAFAFA;
+  border-radius: 12px;
+  border: solid 1px #E6E7EA;
+  margin-left: 1.5rem;
+  margin-right: 25rem;
+  width: 73vw;
+  text-align: center;
+  height: 32rem;
+}
+
+.voice_content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  font-weight: 600;
+  background-color: #fff;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  border-bottom: solid 1px #E6E7EA;
+}
+
+.voice_content h4 {
+  margin-left: 32rem;
+  margin-right: 10px;
+  font-size: 1.2rem;
+  width: 90px;
+}
+
+.voice_content_text {
+  background-color: #F3E8FF;
+  color: #8B5CF6;
+  border-radius: 20px;
+  padding: 4px 8px;
+  font-size: 0.8rem;
+  font-weight: 900;
+}
+
+.voice_container {
+  height: 380px;
+}
+
+.voice_container div {
+  align-items: center;
+  justify-content: center;
+}
+
+.voice_button {
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  background-color: #8B5CF6;
+  padding: 6px;
+}
+
+.waiting_container {
+  height: 55px;
+  line-height: 55px;
+  background-color: #fff;
+  color: #6B7283;
+  align-items: center;
+  justify-content: center;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px ;
+}

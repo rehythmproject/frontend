@@ -2,12 +2,39 @@ import './LoginPage.css'
 import SignBack from '../components/SignBack';
 import SocialLogin from '../components/SignPage/SocialLogin';
 import { Link, useNavigate } from 'react-router-dom';
+import Server from '../utils/API';
+import { useState } from 'react';
 
 const LoginPage = () => {
     const navigate = useNavigate();
 
+    const [email, setEmail] = useState('');
+    const [pwd, setPwd] = useState('');
+
     const handleLoginButton = () => {
+      sendData();
+    }
+
+    const handleEmail = (e) => {
+      setEmail(e.target.value);
+    }
+
+    const handlePwd = (e) => {
+      setPwd(e.target.value);
+    }
+
+    const sendData = async () => {
+      const login = Server.post('/auth/login', {
+        'email': email,
+        'password': pwd
+      })
+      .then((req) => {
+        console.log(req.data);
         navigate('/availableModel');
+      })
+      .catch((req) => {
+        console.log(req.error);
+      })
     }
 
   return (
@@ -22,9 +49,9 @@ const LoginPage = () => {
           <div className='sign_input_container'>
             <div className='sign_input'>
                 <label htmlFor="email" className='signin_label'>Email</label>
-                <input type="text" id='email' className='signin_input' placeholder='ex) example@email.com' />
+                <input type="text" id='email' className='signin_input' placeholder='ex) example@email.com' onChange={handleEmail}/>
                 <label htmlFor="password" className='signin_label' style={{ marginTop:'15px'}}>Password <span style={{color:'#969BA7', fontWeight:400, fontSize:'14px', marginLeft:'5px'}}>(20자 이내)</span></label>
-                <input type="password" id='password' className='signin_input' maxLength={20} placeholder='Enter your password' />
+                <input type="password" id='password' className='signin_input' maxLength={20} placeholder='Enter your password' onChange={handlePwd}/>
           </div>
             <button className='login_button' onClick={handleLoginButton}>Log in</button>
             <SocialLogin />
