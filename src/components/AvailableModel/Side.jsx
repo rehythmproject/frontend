@@ -7,9 +7,8 @@ import TotalAmount from "./TotalAmount";
 
 const Side = ({keepModel,totalPrice,handleDeleteModel}) => {
   const [changeButton, setChangeButton] = useState("정보추가");
-
   return (
-    <div className="appdiv">
+    <div className='appdiv'>
       <ChangeButton changeButton={changeButton} setChangeButton={setChangeButton} />
       {changeButton === "정보추가" ? (
         <>
@@ -22,8 +21,8 @@ const Side = ({keepModel,totalPrice,handleDeleteModel}) => {
           <h4 style={{marginLeft:"22px"}}>정보확인 화면입니다요</h4>
         </div>
       )}
-      </div>
-  )
+    </div>
+  );
 };
 
 export default Side;

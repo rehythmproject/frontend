@@ -21,6 +21,10 @@ const TotalAmount = ({totalPrice}) => {
   }, [orderPayment]);
 
   const openPayment = () => {
+    if(totalPrice == 0){
+      alert('결제할 모델을 선택해주세요.');
+      return;
+    }
     setOrderPayment(true);  
     setIsPaymentCompleted(false); 
   };
@@ -72,18 +76,19 @@ const TotalAmount = ({totalPrice}) => {
             <div className='payment-information'>
               <div className='payment-content-main-money'>
                 <div className='payment-content-text-money'>Subtotal</div>
-                <div className='payment-content-money'>₩882.00</div>
+                <div className='payment-content-money'>₩{totalPrice}</div>
               </div>
               <div className='payment-content-main-money'>
-                <div className='payment-content-text-money'>Tax (10%)</div>
-                <div className='payment-content-money'>₩38.20</div>
+                <div className='payment-content-text-money'>Tax (0%)</div>
+                <div className='payment-content-money'>₩{salePrice}</div>
               </div>
               <div className='payment-content-main-money'>
                 <div className='payment-content-text-money2'>Total</div>
-                <div className='payment-content-money2'>₩982.00</div>
+                <div className='payment-content-money2'>₩{totalPrice-salePrice}</div>
               </div>
             </div>
             <PaymentMethod 
+              totalPrice={totalPrice}
               closePayment={closePayment} 
               setIsPaymentCompleted={setIsPaymentCompleted} 
             />
@@ -93,6 +98,7 @@ const TotalAmount = ({totalPrice}) => {
 
     {isPaymentCompleted && 
       <PaymentCompleted 
+        totalPrice={totalPrice}
         onRetry={handleRetryPayment}
         closePaymentCompleted={closePaymentCompleted} 
       />}

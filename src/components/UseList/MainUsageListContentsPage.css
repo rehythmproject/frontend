@@ -50,6 +50,25 @@
   width: 90px;
 }
 
+.list_content_summary.loading_message{
+  align-self: end;
+  height: 70px;
+  border: none;
+  border-top: solid 1px #E6E7EA;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.loading_message h4{
+  width: 250px;
+  margin-left: 30rem;
+  font-size: 1rem;
+  color: #6B7283;
+  font-weight: 500;
+}
+
 .list_counter {
   background-color: #F3E8FF;
   color: #8B5CF6;
@@ -62,6 +81,17 @@
   height: 435px;
   display: flex;
   text-align: left;
+}
+
+.user_content.false{
+  display: flex;
+  flex-direction: column;
+}
+
+.user_content .BeatLoader{
+  margin: auto;
+  display: flex;
+  margin-left: 31rem;
 }
 
 .user_content1 {

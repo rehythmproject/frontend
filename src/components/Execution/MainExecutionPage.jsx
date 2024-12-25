@@ -4,6 +4,7 @@ import AudioAnalyser from 'react-audio-analyser';
 
 const MainExecutionPage = () => {
   const [status, setStatus] = useState('inactive');
+  const [voice, setVoice] = useState(true)
 
   const controlAudio = (status) => setStatus(status);
 
@@ -16,6 +17,8 @@ const MainExecutionPage = () => {
     if (userConfirmed) {
       console.log("사용자가 확인 버튼을 눌렀습니다.");
       controlAudio('paused')
+      setVoice(false)
+
     } else {
       console.log("사용자가 취소 버튼을 눌렀습니다.");
       controlAudio('recording')
@@ -41,7 +44,7 @@ const MainExecutionPage = () => {
               height={250}
               width={800}   
             />
-            <button className='voice_button' onClick={endvoice}>끝내기</button>
+            <button className='voice_button' onClick={endvoice} disabled={voice === false}>끝내기</button>
           </div>
         </div>
         <div className='waiting_container'>

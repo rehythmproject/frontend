@@ -20,7 +20,7 @@ const ModelItem = ({Id, tag, title, desc, price, handleAddModel}) => {
         <div className="model_item">
             <div className="model_main">
                 <div className="image_container">
-                    <img src="/images/delLa.png" alt="delLa" style={{width:'110px', borderRadius: '10px'}} />
+                    <img src={`/images/${title}.png`} alt="delLa" style={{width:'110px', borderRadius: '10px'}} />
                 </div>
                 <div className='model_detail'>
                     <p className='model_title'>{title}</p>

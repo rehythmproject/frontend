@@ -2,7 +2,7 @@
 const PlusServiceItem = ({id,title, price,handleDeleteModel}) => {
     return(
         <div className='service-item'>
-          <img className='model-img' src="./images/주문 목록1.png" alt="delLa" />
+          <img className='model-img' src={`/images/${title}2.png`} alt="delLa" />
           <div className='modelinfo'>
             <div className='modelname'>{title}</div>
             <div className='money-main-div'>

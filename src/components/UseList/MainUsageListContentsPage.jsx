@@ -1,14 +1,19 @@
+import { useState } from 'react';
 import './MainUsageListContentsPage.css';
+import { BeatLoader } from 'react-spinners';
 
 const MainUsageListContentsPage = () => {
+  const [dataState, setDataState] = useState(false);
+  
   return (
     <div className='MainUsageListContentsPage'>
       <div className='MainUsageListContentsPage_title'>
         <h3>몬드리안 회사와 미팅</h3>
         <div>사용한 모델기록</div>
       </div>
-
-      <div className='MainUsageListContentsPage_container'>
+      {
+        dataState ? (
+          <div className='MainUsageListContentsPage_container'>
       <div className="list_content_summary">
         <h4>음성기록</h4>
         <div className="list_counter">120</div>
@@ -45,6 +50,24 @@ const MainUsageListContentsPage = () => {
         </div>
       </div>
       </div>
+        ) :
+        (
+          <div className='MainUsageListContentsPage_container'>
+      <div className="list_content_summary">
+        <h4>음성기록</h4>
+        <div className="list_counter">모델이 솔루션을 생각 중입니다!</div>
+      </div>
+      <div className='user_content false'>
+      <BeatLoader className='BeatLoader' color="#9022FF" size={40} />
+      <div className="list_content_summary loading_message">
+        <h4>잠시만 기다려주세요...</h4>
+      </div>
+      </div>
+      
+      </div>
+        )
+      }
+      
     </div>
   )
 }
