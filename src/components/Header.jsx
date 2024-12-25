@@ -4,7 +4,7 @@ import { Link, NavLink } from 'react-router-dom';
 const Header = () => {
     return (
         <div className="header_container">
-            <img src="/images/Re듬.png" alt="logo" className="reduem_logo" style={{ width:'110px'}}/>
+            <Link to={'/availableModel'}><img src="/images/Re듬.png" alt="logo" className="reduem_logo" style={{ width:'110px'}}/></Link>
             <div className="navigation_container">
                 <ul className='navi_list'>
                     <NavLink to="/availableModel" style={{textDecoration:'none'}}>

@@ -3,6 +3,7 @@
     width: 100%;
     background-color: #FAFAFA;
     padding-bottom: 300px;
+    overflow: hidden;
 }
 
 .main_title{
@@ -50,4 +51,36 @@
     background-color: #F3F3f3;
     color: #969BA7;
     cursor: pointer;
+}
+
+.side_button{
+    display: none;
+}
+
+@media (max-width:1250px) {
+    .category_container{
+        width: 93%;
+    }
+
+    .recent_list_container{
+        width: 93%;
+    }
+
+    .model_list{
+        width: 93%;
+    }
+    .side_button{
+        display: block;
+        position: fixed;
+        right: 40px;
+        bottom: 70px;
+        z-index: 5;
+        color: #9022FF;
+        background-color: #F4E9FF;
+        border:none;
+        border-radius: 30px;
+        padding: 5px;
+        width: 100px;
+        box-shadow: 1px 1px 20px 2px #efefef;
+    }
 }
