@@ -1,26 +1,35 @@
 import './MainExecutionPage.css'
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import AudioAnalyser from 'react-audio-analyser';
 
 const MainExecutionPage = () => {
   const [status, setStatus] = useState('inactive');
-  const [voice, setVoice] = useState(true)
+  const [voiceStart, setVoiceStart] = useState(true)
+  const [voiceEnd, setVoiceEnd] = useState(true)
 
   const controlAudio = (status) => setStatus(status);
 
-  useEffect(() => {
-    setStatus('recording');
-  }, []);
+  // useEffect(() => {
+  //   setStatus('recording');
+  // }, []);
 
-  const endvoice = () => {
-    const userConfirmed = window.confirm("정말 이 작업을 진행하시겠습니까?");
-    if (userConfirmed) {
-      console.log("사용자가 확인 버튼을 눌렀습니다.");
+  const startVoice = () => {
+    const userConfirmedStart = window.confirm("녹음을 시작합니다.");
+    if (userConfirmedStart) {
+      controlAudio('recording')
+      setVoiceStart(false)
+    } else {
       controlAudio('paused')
-      setVoice(false)
+    }
+  }
+
+  const endVoice = () => {
+    const userConfirmed = window.confirm("녹음을 종료하시겠습니까?");
+    if (userConfirmed) {
+      controlAudio('paused')
+      setVoiceEnd(false)
 
     } else {
-      console.log("사용자가 취소 버튼을 눌렀습니다.");
       controlAudio('recording')
     }
   }
@@ -44,7 +53,8 @@ const MainExecutionPage = () => {
               height={250}
               width={800}   
             />
-            <button className='voice_button' onClick={endvoice} disabled={voice === false}>끝내기</button>
+            <button className='voiceStart_button'onClick={startVoice} disabled={voiceStart === false}>시작하기</button>
+            <button className='voiceEnd_button' onClick={endVoice} disabled={voiceEnd === false}>끝내기</button>
           </div>
         </div>
         <div className='waiting_container'>

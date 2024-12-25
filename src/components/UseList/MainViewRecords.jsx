@@ -8,8 +8,8 @@ const MainViewRecords = () => {
   const { code } = useParams(); 
 
   const records = [
-    { modelName: 'deLLa', time: '10:00 AM', status: '프로젝트 관련' },
-    { modelName: 'baleum', time: '09:35 PM', status: '개발 스택에 관해 논의' },
+    { modelName: 'deLLa', time: '15 May 2022', status: '프로젝트 관련' },
+    { modelName: 'baleum', time: '16 May 2022', status: '개발 스택에 관해 논의' },
     { modelName: 'toron', time: '17 May 2022', status: '프로젝트 주제 선택' },
     { modelName: 'oliva', time: '17 May 2022', status: '키워드 추가' },
     { modelName: 'model5', time: '18 May 2022', status: '추가 모델' },

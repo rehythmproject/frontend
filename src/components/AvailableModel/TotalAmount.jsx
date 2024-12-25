@@ -7,6 +7,7 @@ const TotalAmount = ({totalPrice}) => {
   const [orderPayment, setOrderPayment] = useState(false);
   const [isPaymentCompleted, setIsPaymentCompleted] = useState(false);
   const salePrice = totalPrice * 0.00;
+  const [selectedMethod, setSelectedMethod] = useState('toss');
 
   useEffect(() => {
     if (orderPayment) {
@@ -21,6 +22,7 @@ const TotalAmount = ({totalPrice}) => {
   }, [orderPayment]);
 
   const openPayment = () => {
+    setSelectedMethod('toss');
     if(totalPrice == 0){
       alert('결제할 모델을 선택해주세요.');
       return;
@@ -30,6 +32,7 @@ const TotalAmount = ({totalPrice}) => {
   };
 
   const closePayment = () => {
+    // setSelectedMethod('toss');
     setOrderPayment(false); 
   };
 
@@ -90,7 +93,9 @@ const TotalAmount = ({totalPrice}) => {
             <PaymentMethod 
               totalPrice={totalPrice}
               closePayment={closePayment} 
-              setIsPaymentCompleted={setIsPaymentCompleted} 
+              setIsPaymentCompleted={setIsPaymentCompleted}
+              selectedMethod={selectedMethod} 
+              setSelectedMethod={setSelectedMethod}
             />
           </div>
         </div>
@@ -101,6 +106,7 @@ const TotalAmount = ({totalPrice}) => {
         totalPrice={totalPrice}
         onRetry={handleRetryPayment}
         closePaymentCompleted={closePaymentCompleted} 
+        selectedMethod={selectedMethod}
       />}
     </div>
   );
