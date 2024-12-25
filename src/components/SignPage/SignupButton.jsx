@@ -54,9 +54,7 @@ const SignupButton = ({handleNextPage, currentPage, pwd, rpwd, usernm, emailchec
         } else if (currentPage === 2) {
             //비밀번호 페이지 이동
             navigate('step4')
-        } else if (currentPage === 3) {
-            navigate('finish');
-        }
+        } 
         //총 페이지보다 적으면 현재 페이지 번호 + 1
     };
 

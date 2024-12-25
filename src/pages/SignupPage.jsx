@@ -1,17 +1,17 @@
 import { createContext, useContext, useState } from 'react';
 import './SignupPage.css'
-import { Outlet } from 'react-router-dom';
+import { Outlet, useNavigate } from 'react-router-dom';
 import ProgressBar from '../components/SignPage/ProgressBar';
 import SignBack from '../components/SignBack';
 import SignupTitle from '../components/SignPage/SignupTitle';
 import SignupButton from '../components/SignPage/SignupButton';
 import SocialLogin from '../components/SignPage/SocialLogin';
-import axios from 'axios';
 import Server from '../utils/API';
 
 export const signFormContext = createContext();
 
 function SignupPage() {
+  const navigate = useNavigate();
 
   const [signData, setSignData] = useState({
     usernm: '',
@@ -36,22 +36,59 @@ function SignupPage() {
   }
 
   const sendData = async () => {
-      const signup = Server.post('/auth/signup', {
-          'username': signData.usernm,
-          'password': signData.pwd,
-          'useremail': signData.email,
-          'phone': signData.phone,
+    //username
+    Server.post('/auth/signup/step1', {
+      username: signData.usernm,
+    }, {
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    .then((res) => {
+      console.log(res.data);
+
+      //email
+      return Server.post('/auth/signup/step2', {
+        email: signData.email,
       }, {
         headers: {
-          'Content-Type': 'application/json' // JSON 형식 명시
+          'Content-Type': 'application/json'
         }
-      })
-      .then((req) => {
-        console.log(req.data);
-      })
-      .catch((req) => {
-        console.log(req.error);
-      })
+      });
+    })
+    .then((res) => {
+      console.log(res.data);
+
+      //phone
+      return Server.post('/auth/signup/step3', {
+        phone: signData.phone,
+      }, {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+    })
+    .then((res) => {
+      console.log(res.data);
+
+      //password
+      return Server.post('/auth/signup/step4', {
+        password: signData.pwd,
+      }, {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+    })
+    .then((res) => {
+      console.log(res.data);
+
+      // 모든 요청이 성공하면 페이지 이동
+      navigate('finish');
+    })
+    .catch((err) => {
+      console.error(err.response.data);
+    });   
   }
 
 

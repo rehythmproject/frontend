@@ -1,7 +1,11 @@
 import './EndSignup.css';
+import { useContext } from 'react';
+import { signFormContext } from '../../pages/SignupPage';
 
 
 const EndSignup = () => {
+    const {setCurrentPage} = useContext(signFormContext);
+    setCurrentPage(4);
     return(
         <div className="end_signup">
             <div className="hello_img"><img src="/images/congratulations.png" alt="hello" style={{padding:'25px'}}/></div>

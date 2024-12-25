@@ -24,20 +24,22 @@ const LoginPage = () => {
     }
 
     const sendData = async () => {
-      const login = Server.post('/auth/login', {
-        'email': email,
-        'password': pwd
+      Server.post('/auth/login', {
+        email: email,
+        ConfirmPassword: pwd
       }, {
         headers: {
           'Content-Type': 'application/json' // JSON 형식 명시
         }
       })
-      .then((req) => {
-        console.log(req.data);
+      .then((res) => {
+        console.log(res.data);
+        alert(res.data);
         navigate('/availableModel');
       })
-      .catch((req) => {
-        console.log(req.error);
+      .catch((error) => {
+        console.log(error.response.data);
+        alert(error.response.data);
       })
     }
 
@@ -55,7 +57,7 @@ const LoginPage = () => {
                 <label htmlFor="email" className='signin_label'>Email</label>
                 <input type="text" id='email' className='signin_input' placeholder='ex) example@email.com' onChange={handleEmail}/>
                 <label htmlFor="password" className='signin_label' style={{ marginTop:'15px'}}>Password <span style={{color:'#969BA7', fontWeight:400, fontSize:'14px', marginLeft:'5px'}}>(20자 이내)</span></label>
-                <input type="password" id='password' className='signin_input' maxLength={20} placeholder='Enter your password' onChange={handlePwd}/>
+                <input type="password" id='password' className='signin_input' placeholder='Enter your password' onChange={handlePwd}/>
           </div>
             <button className='login_button' onClick={handleLoginButton}>Log in</button>
             <SocialLogin />
