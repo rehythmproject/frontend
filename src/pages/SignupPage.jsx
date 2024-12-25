@@ -36,9 +36,11 @@ function SignupPage() {
   }
 
   const sendData = async () => {
-    //username
-    Server.post('/auth/signup/step1', {
+    Server.post('/auth/signup', {
       username: signData.usernm,
+      email: signData.email,
+      phone: signData.phone,
+      password: signData.pwd,
     }, {
       headers: {
         'Content-Type': 'application/json'
@@ -46,45 +48,6 @@ function SignupPage() {
     })
     .then((res) => {
       console.log(res.data);
-
-      //email
-      return Server.post('/auth/signup/step2', {
-        email: signData.email,
-      }, {
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      });
-    })
-    .then((res) => {
-      console.log(res.data);
-
-      //phone
-      return Server.post('/auth/signup/step3', {
-        phone: signData.phone,
-      }, {
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      });
-    })
-    .then((res) => {
-      console.log(res.data);
-
-      //password
-      return Server.post('/auth/signup/step4', {
-        password: signData.pwd,
-      }, {
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      });
-    })
-    .then((res) => {
-      console.log(res.data);
-
-      // 모든 요청이 성공하면 페이지 이동
-      navigate('finish');
     })
     .catch((err) => {
       console.error(err.response.data);
