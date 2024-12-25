@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import './PaymentMethod.css';
 import QRCode from './QRCode';
 
-const PaymentMethod = ({ totalPrice,closePayment, setIsPaymentCompleted }) => {
-  const [selectedMethod, setSelectedMethod] = useState('toss');
+const PaymentMethod = ({ totalPrice, closePayment, setIsPaymentCompleted, selectedMethod , setSelectedMethod}) => {
 
   const handleClick = (method) => {
     setSelectedMethod(method);

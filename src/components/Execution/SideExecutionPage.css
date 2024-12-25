@@ -6,6 +6,7 @@
   z-index: 1;
   right: 0;
   margin-left: 0px;
+  background-color: #fff;
 }
 
 .sideExecution_section {
@@ -60,4 +61,10 @@
 
 .sideExecution_button img {
   margin-right: 0.5rem;
+}
+
+@media (max-width:1150px) {
+  .SideExecutionPage{
+      display: none;
+  }
 }

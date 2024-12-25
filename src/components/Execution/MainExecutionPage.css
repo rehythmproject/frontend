@@ -37,6 +37,7 @@
   margin-right: 10px;
   font-size: 1.2rem;
   width: 90px;
+  text-align: center;
 }
 
 .voice_content_text {
@@ -57,7 +58,17 @@
   justify-content: center;
 }
 
-.voice_button {
+.voiceStart_button {
+  border: solid 1px #8B5CF6;
+  padding: 6px;
+  border-radius: 8px;
+  background-color: #fff;
+  margin-right: 10px;
+  color: #8B5CF6;
+  cursor: pointer;
+}
+
+.voiceEnd_button {
   border: none;
   border-radius: 8px;
   color: #fff;
@@ -76,3 +87,4 @@
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px ;
 }
+
