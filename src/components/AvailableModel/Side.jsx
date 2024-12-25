@@ -1,4 +1,3 @@
-// Side.js
 import { useState } from "react";
 import "./Side.css";
 import ChangeButton from "./ChangeButton";

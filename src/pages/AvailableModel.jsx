@@ -15,7 +15,7 @@ const AvailableModel = () => {
   }
 
   const handleDeleteModel = (deleteIndex) => {
-    const minusPrice = keepModel.filter((item) => item.id == deleteIndex);
+    const minusPrice = keepModel.filter((item) => item.id === deleteIndex);
     setKeepModel((prev)=>prev.filter((item) => item.id !== deleteIndex))
     setTotalPrice((prev)=>prev-=minusPrice[0].price);
   }

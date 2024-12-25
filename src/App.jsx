@@ -12,6 +12,7 @@ import Profile from './pages/Profile';
 import UseModelPage from './pages/UseModelPage';
 import ViewRecords from './pages/ViewRecords';
 import UsageListContentsPage from './pages/UsageListContentsPage';
+import ExecutionPage from './pages/ExecutionPage';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
         <Route path='useModelPage' element={<UseModelPage />} />
         <Route path='useModelPage/viewRecords/:code' element={<ViewRecords />}/>
         <Route path='useModelPage/UsageListContentsPage/:code' element={<UsageListContentsPage />}/>
+        <Route path='execution' element={<ExecutionPage />}/>
       </Routes>
     </div>
   );

@@ -1,0 +1,63 @@
+.SideExecutionPage {
+  margin-top: 78px;
+  width: 360px;
+  height: 800px;
+  position: fixed; 
+  z-index: 1;
+  right: 0;
+  margin-left: 0px;
+}
+
+.sideExecution_section {
+  margin-top: 60px;
+  margin-left: 10px;
+}
+
+.sideExecution_section h4 {
+  color: #00081D;
+}
+
+.sideExecution_subtext {
+  font-size: 1rem;
+  color: #6B7283;
+  font-weight: bold;
+  padding-top: 5px;
+}
+
+.sideExecution_input {
+  width: 310px;
+  height: 380px;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  padding: 0.8rem;
+  font-size: 0.9rem;
+  resize: none;
+  margin-bottom: 1rem;
+}
+
+.sideExecution_line {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-top: 0.2rem;
+  margin-bottom: 1.8rem;
+  width: 100vw;
+  margin-left: -10px;
+}
+
+.sideExecution_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #9022FF;
+  color: white;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 60px;
+  padding: 0.8rem;
+  cursor: pointer;
+  width: 320px;
+  margin-left: 10px;
+}
+
+.sideExecution_button img {
+  margin-right: 0.5rem;
+}

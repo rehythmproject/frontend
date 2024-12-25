@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './PaymentCompleted.css';
 
 const PaymentCompleted = ({ totalPrice, onRetry, closePaymentCompleted }) => {
   const [paymentStatus, setPaymentStatus] = useState('success'); // failure success
+  const navigate = useNavigate()
 
   const getNowdate = () => {
     const now = new Date;
@@ -20,6 +22,12 @@ const PaymentCompleted = ({ totalPrice, onRetry, closePaymentCompleted }) => {
   const handlePaymentCompletedClick = () => {
     closePaymentCompleted();
   }
+
+  const handleExecutionPage = () => {
+    navigate('/execution')
+  }
+
+
   return (
     <div className="payment-completed-overlay">
     {paymentStatus === 'failure' ? (
@@ -54,7 +62,7 @@ const PaymentCompleted = ({ totalPrice, onRetry, closePaymentCompleted }) => {
           <div className='payment-line'></div>
           <p className="payment-method">Payment Method <span>kakao Pay</span></p>
           <p className="payment-time">Payment Time <span>{getNowdate()}</span></p>
-          <button className="retry-button">바로 실행하기</button> {/*실행이 진행되는 화면으로 이동만들어야함*/}
+          <button className="retry-button" onClick={handleExecutionPage}>바로 실행하기</button> 
           <button className='close-button' onClick={handlePaymentCompletedClick}>닫기</button>
         </div>
       ) : null}
