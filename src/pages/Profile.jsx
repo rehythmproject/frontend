@@ -59,7 +59,7 @@ const Profile = () => {
                       <h3 style={{fontWeight:'700', marginBottom:'8px', marginTop:'8px', marginLeft:'15px'}}>사용한 모델 기록</h3>
                       <table border={1}>
                             <tr className='use_model_item n'>
-                                <img className='use_model_img' src="/images/delLa.png"/>
+                                <img className='use_model_img' src="/images/delLa.png" alt='model_img'/>
                                 <div className="info">
                                     <p className='title'>delLa</p>
                                     <p className='order'>Order: <span>5</span></p>
@@ -67,7 +67,7 @@ const Profile = () => {
                                 <p className="ratio">27.5%</p>
                             </tr>
                             <tr className='use_model_item n'>
-                                <img className='use_model_img' src="/images/delLa.png"/>
+                                <img className='use_model_img' src="/images/delLa.png" alt='model_img'/>
                                 <div className="info">
                                     <p className='title'>delLa</p>
                                     <p className='order'>Order: <span>5</span></p>
@@ -75,7 +75,7 @@ const Profile = () => {
                                 <p className="ratio">27.5%</p>
                             </tr>
                             <tr className='use_model_item n'>
-                                <img className='use_model_img' src="/images/delLa.png"/>
+                                <img className='use_model_img' src="/images/delLa.png" alt='model_img'/>
                                 <div className="info">
                                     <p className='title'>delLa</p>
                                     <p className='order'>Order: <span>5</span></p>
@@ -83,7 +83,7 @@ const Profile = () => {
                                 <p className="ratio">27.5%</p>
                             </tr>  
                             <tr className='use_model_item'>
-                                <img className='use_model_img' src="/images/delLa.png"/>
+                                <img className='use_model_img' src="/images/delLa.png" alt='model_img'/>
                                 <div className="info">
                                     <p className='title'>delLa</p>
                                     <p className='order'>Order: <span>5</span></p>

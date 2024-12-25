@@ -16,4 +16,4 @@ const PlusServices = ({keepModel, handleDeleteModel}) => {
   )
 }
 
-export default PlusServices;
+export default PlusServices

@@ -1,8 +1,14 @@
-.plus-services {
+  .plus-services {
     display: flex;
     flex-direction: column;
     width: 316px;
     margin: auto;
+    height: 236px;
+    overflow-y: auto;
+  }
+
+  .plus-services::-webkit-scrollbar {
+    display: none;
   }
   
   .plus-h4 {
@@ -15,10 +21,8 @@
     width: 316px;
     display: flex; 
     padding: 0;
-    /* 각 서비스 항목 간의 간격 */
-    border-bottom: 1px solid #E0E0E0; /* 구분선 추가 */
-    margin-bottom: 0; /* 추가 여백 */
-    
+    border-bottom: 1px solid #E0E0E0; 
+    margin-bottom: 0;     
   }
   
   .modelinfo{

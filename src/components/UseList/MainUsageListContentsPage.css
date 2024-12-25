@@ -1,0 +1,151 @@
+.MainUsageListContentsPage {
+  margin-top: 76px;
+  background-color: #FAFAFA;
+  padding-bottom: 100vh;
+  position: fixed;
+}
+
+.MainUsageListContentsPage_title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.MainUsageListContentsPage_title h3 {
+  margin-left: 1rem;
+}
+
+.MainUsageListContentsPage_title div {
+  color: #6B7283;
+  margin: 1rem 26rem;
+  font-size: 0.8rem;
+  padding-top: 0.6rem;
+}
+
+.MainUsageListContentsPage_container {
+  background-color: #FAFAFA;
+  border-radius: 12px;
+  border: solid 1px #E6E7EA;
+  margin-left: 1.5rem;
+  margin-right: 25rem;
+  width: 73vw;
+  text-align: center;
+  height: 32rem;
+}
+
+.list_content_summary {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  font-weight: 600;
+  background-color: #fff;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  border-bottom: solid 1px #E6E7EA;
+}
+
+.list_content_summary h4 {
+  margin-left: 32rem;
+  margin-right: 10px;
+  font-size: 1.2rem;
+  width: 90px;
+}
+
+.list_content_summary.loading_message{
+  align-self: end;
+  height: 70px;
+  border: none;
+  border-top: solid 1px #E6E7EA;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.loading_message h4{
+  width: 250px;
+  margin-left: 30rem;
+  font-size: 1rem;
+  color: #6B7283;
+  font-weight: 500;
+}
+
+.list_counter {
+  background-color: #F3E8FF;
+  color: #8B5CF6;
+  border-radius: 20px;
+  padding: 4px 8px;
+  font-size: 0.8rem;
+}
+
+.user_content {
+  height: 435px;
+  display: flex;
+  text-align: left;
+}
+
+.user_content.false{
+  display: flex;
+  flex-direction: column;
+}
+
+.user_content .BeatLoader{
+  margin: auto;
+  display: flex;
+  margin-left: 31rem;
+}
+
+.user_content1 {
+  width: 50%;
+  height: 95%;
+  margin-left: 8px;
+  border-right: #E6E7EA 2px solid;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.user_content1 div {
+  margin-bottom: 10px;
+}
+
+.user_content1::-webkit-scrollbar {
+  background-color: #FAFAFA;
+  width: 10px;
+}
+
+.user_content1::-webkit-scrollbar-thumb {
+  background: #8B5CF6; 
+  border-radius: 10px; 
+}
+
+.user_content1::-webkit-scrollbar-track {
+  background: #F3E8FF;  
+}
+
+.user_content2 {
+  width: 50%;
+  height: 95%;
+  margin-left: 8px;
+  overflow-y: auto;
+  padding:10px;
+}
+
+.user_content2::-webkit-scrollbar {
+  background-color: #FAFAFA;
+  width: 10px;
+}
+
+.user_content2::-webkit-scrollbar-thumb {
+  background: #8B5CF6; 
+  border-radius: 10px; 
+}
+
+.user_content2::-webkit-scrollbar-track {
+  background: #F3E8FF;  
+}
+
+/* 페이지네이션 스타일 */
+/* .MainUsageListContentsPage .content_pageMove {
+  display: flex;
+  background-color: #fff;
+  border-top: #E6E7EA 2px solid;
+} */

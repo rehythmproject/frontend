@@ -9,7 +9,9 @@ import EndSignup from './components/SignPage/EndSignup';
 import LoginPage from './pages/LoginPage';
 import AvailableModel from './pages/AvailableModel';
 import Profile from './pages/Profile';
-import UseModelPage from './pages/UseModelPage';import ViewRecords from './pages/ViewRecords';
+import UseModelPage from './pages/UseModelPage';
+import ViewRecords from './pages/ViewRecords';
+import UsageListContentsPage from './pages/UsageListContentsPage';
 
 function App() {
   return (
@@ -31,6 +33,7 @@ function App() {
         <Route path='availableModel' element={<AvailableModel />}/>
         <Route path='useModelPage' element={<UseModelPage />} />
         <Route path='useModelPage/viewRecords/:code' element={<ViewRecords />}/>
+        <Route path='useModelPage/UsageListContentsPage/:code' element={<UsageListContentsPage />}/>
       </Routes>
     </div>
   );
