@@ -41,6 +41,10 @@ function SignupPage() {
           'password': signData.pwd,
           'useremail': signData.email,
           'phone': signData.phone,
+      }, {
+        headers: {
+          'Content-Type': 'application/json' // JSON 형식 명시
+        }
       })
       .then((req) => {
         console.log(req.data);

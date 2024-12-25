@@ -27,6 +27,10 @@ const LoginPage = () => {
       const login = Server.post('/auth/login', {
         'email': email,
         'password': pwd
+      }, {
+        headers: {
+          'Content-Type': 'application/json' // JSON 형식 명시
+        }
       })
       .then((req) => {
         console.log(req.data);
