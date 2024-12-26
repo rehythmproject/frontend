@@ -2,12 +2,21 @@ import React, { useState, useEffect } from 'react';
 import './TotalAmount.css';
 import PaymentMethod from './PaymentMethod';
 import PaymentCompleted from './PaymentCompleted';
+import Server from '../../utils/API';
 
 const TotalAmount = ({totalPrice}) => {
   const [orderPayment, setOrderPayment] = useState(false);
   const [isPaymentCompleted, setIsPaymentCompleted] = useState(false);
   const salePrice = totalPrice * 0.00;
   const [selectedMethod, setSelectedMethod] = useState('toss');
+
+  // const totalData = Server.get(`/api/cart/${userId}/total`)
+  //                   .then((res) => {
+  //                     console.log(res.data);
+  //                   })
+  //                   .catch((err) => {
+  //                     console.log(err.response.data);
+  //                   })
 
   useEffect(() => {
     if (orderPayment) {

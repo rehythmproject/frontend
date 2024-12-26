@@ -5,6 +5,7 @@ import PlusInformation from "./PlusInformation";
 import PlusServices from "./PlusServices";
 import TotalAmount from "./TotalAmount";
 
+
 const Side = ({keepModel,totalPrice,handleDeleteModel,sideView}) => {
   const [changeButton, setChangeButton] = useState("정보추가");
   return (

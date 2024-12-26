@@ -1,0 +1,40 @@
+.payrecord_compo_container {
+    overflow-y: auto;
+    background-color: #FAFAFA;
+    min-height: 725px;
+    padding-left: 18px;
+    padding-right: 18px;
+}
+
+.payrecord_top {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.payrecord_top_right{
+    display: flex;
+    align-items: center;
+}
+
+.payrecord_main{
+    margin-top: 60px;
+    overflow-x: hidden;
+}
+
+.payrecord_list{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 30px;
+    margin-top: 10px;
+    justify-content: left;
+    align-items: flex-start;
+}
+
+@media (max-width: 1199px) {
+    .payrecord_top_right{
+        display: none;
+    }
+}
