@@ -30,7 +30,11 @@ const AvailableModel = () => {
     //userId
     // Server.post(`/cart/add/add/${tag}`,{
 
-    // })
+    // }, {
+    //       headers: {
+    //          'Content-Type': 'application/json' // JSON 형식 명시
+    //        }
+    //     })
     // .then((res) => {
     //   console.log(res.data);
     // })
@@ -47,7 +51,11 @@ const AvailableModel = () => {
     // const tag = minusPrice[0].code // 변환 결과를 modelId에 저장
 
 
-    // Server.delete(`/api/cart/add/remove/${tag}`)
+    // Server.delete(`/api/cart/add/remove/${tag}`, {
+    //       headers: {
+    //          'Content-Type': 'application/json' // JSON 형식 명시
+    //        }
+    //     }))
     // .then((res) => {
     //   console.log(res.data);
     // })

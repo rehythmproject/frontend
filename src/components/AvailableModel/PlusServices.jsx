@@ -5,7 +5,11 @@ import Server from "../../utils/API";
 
 
 const PlusServices = ({keepModel, handleDeleteModel}) => {
-  // const modelData = Server.get(`/api/cart/add`)
+  // const modelData = Server.get(`/api/cart/add`, {
+  //                      headers: {
+  //                        'Content-Type': 'application/json' // JSON 형식 명시
+  //                      }
+  //                   })
   //                 .then((res)=>{
   //                   console.log(res.data);
   //                 })

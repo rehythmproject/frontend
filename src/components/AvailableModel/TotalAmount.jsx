@@ -10,7 +10,11 @@ const TotalAmount = ({totalPrice}) => {
   const salePrice = totalPrice * 0.00;
   const [selectedMethod, setSelectedMethod] = useState('toss');
 
-  // const totalData = Server.get(`/api/cart/add/total`)
+  // const totalData = Server.get(`/api/cart/add/total`, {
+  //                      headers: {
+  //                        'Content-Type': 'application/json' // JSON 형식 명시
+  //                      }
+  //                   })
   //                   .then((res) => {
   //                     console.log(res.data);
   //                   })
