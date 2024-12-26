@@ -81,7 +81,7 @@ const allModelList = [
     },
 ]
 
-const Main = ({handleAddModel,Id}) => {
+const Main = ({handleAddModel,Id,handleSide}) => {
     const [category, setCategory] = useState('공부');
     const onClickCategory = (e) => {
         setCategory(e.target.textContent);
@@ -113,6 +113,7 @@ const Main = ({handleAddModel,Id}) => {
                     ))
                 }
             </ul>
+            <button className='side_button' onClick={handleSide}>Side</button>
         </div>
     );
 }

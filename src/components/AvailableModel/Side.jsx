@@ -5,10 +5,11 @@ import PlusInformation from "./PlusInformation";
 import PlusServices from "./PlusServices";
 import TotalAmount from "./TotalAmount";
 
-const Side = ({keepModel,totalPrice,handleDeleteModel}) => {
+
+const Side = ({keepModel,totalPrice,handleDeleteModel,sideView}) => {
   const [changeButton, setChangeButton] = useState("정보추가");
   return (
-    <div className='appdiv'>
+    <div className={`appdiv ${sideView}`}>
       <ChangeButton changeButton={changeButton} setChangeButton={setChangeButton} />
       {changeButton === "정보추가" ? (
         <>

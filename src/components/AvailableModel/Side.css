@@ -9,7 +9,10 @@
 }
 
 @media (max-width:1250px) {
-    .appdiv{
+    .appdiv.none{
         display: none;
+    }
+    .appdiv.view{
+        display: block;
     }
 }

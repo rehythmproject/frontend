@@ -1,0 +1,72 @@
+.PayRecordItem{
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 20px 2px #efefef;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.payrecorditem_top{
+    display: flex;
+}
+
+.payrecorditem_top h3{
+    margin: 0;
+    font-weight: 550;
+}
+
+.payrecorditem_top p{
+    margin: 0;
+    font-size: 12px;
+    margin-top: 10px;
+    margin-left: 5px;
+    color: #969BA7;
+}
+
+.payrecorditem_price{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.payrecorditem_hr{
+    margin-top: 20px;
+    margin-bottom: 25px;
+    color:#969BA7;
+}
+
+.payrecorditem_price p{
+    margin: 0;
+    color: #969BA7;
+}
+
+.payrecorditem_price span{
+    margin: 0;
+    color: #9022FF;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.payrecorditem_total{
+    display: flex;
+    background-color: #F5EBFF;
+    padding: 13px;
+    justify-content: space-between;
+    color: #8D27FD;
+    font-weight: bold;
+    border-radius: 10px;
+    width: 370px;
+}
+.payrecorditem_total p{
+    margin: 0;
+    margin-top: 9px;
+    font-size: 14px;
+}
+
+.payrecorditem_total h2{
+    margin: 0;
+    font-weight: 600;
+}

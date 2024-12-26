@@ -6,11 +6,14 @@ const RecordButtons = ({ code }) => {
     const onClickGoRecord = () => {
         navigate(`/useModelPage/ViewRecords/${code}`);
     }
+    const onClickGoPayment = () => {
+        navigate(`/useModelPage/payRecords`);
+    }
 
     return(
         <div className="RecordButtons">
             <button className="usemodel_record" onClick={onClickGoRecord}>기록보기</button>
-            <button className="usemodel_record payment">결제기록보기</button>
+            <button className="usemodel_record payment" onClick={onClickGoPayment}>결제기록보기</button>
         </div>
     )
 }

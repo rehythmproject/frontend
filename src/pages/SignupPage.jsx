@@ -39,8 +39,9 @@ function SignupPage() {
     Server.post('/auth/signup', {
       username: signData.usernm,
       email: signData.email,
-      phone: signData.phone,
       password: signData.pwd,
+      ConfirmPassword: signData.rpwd,
+      phone: signData.phone,
     }, {
       headers: {
         'Content-Type': 'application/json'
