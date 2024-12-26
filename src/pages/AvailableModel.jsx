@@ -24,11 +24,11 @@ const AvailableModel = () => {
     setKeepModel((prev) => [...prev, data ]);
     setTotalPrice((prev)=>prev+=data.price);
 
-    const modelId = data.title.toLowerCase();
+    const tag = data.code;
 
     //백엔드 연결 시
     //userId
-    // Server.post(`/cart/${userId}/add/${modelId}`,{
+    // Server.post(`/cart/add/add/${tag}`,{
 
     // })
     // .then((res) => {
@@ -44,10 +44,10 @@ const AvailableModel = () => {
     setKeepModel((prev)=>prev.filter((item) => item.id !== deleteIndex))
     setTotalPrice((prev)=>prev-=minusPrice[0].price);
 
-    // const modelId = minusPrice[0].title.toLowerCase(); // 변환 결과를 modelId에 저장
+    // const tag = minusPrice[0].code // 변환 결과를 modelId에 저장
 
 
-    // Server.delete(`/api/cart/${userId}/remove/${modelId}`)
+    // Server.delete(`/api/cart/add/remove/${tag}`)
     // .then((res) => {
     //   console.log(res.data);
     // })

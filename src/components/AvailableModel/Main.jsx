@@ -47,37 +47,43 @@ const allModelList = [
         tag: '공부',
         title: 'barum',
         desc: '음성인식을 통해 외국어 발음 교정을 해줘요!',
-        price: 100
+        price: 100,
+        code: 'BAR-04'
     },
     {
         tag: '회의',
         title: 'delLa',
         desc: '회의내용들을 분석해 회의 솔루션을 제공해요!',
-        price: 100
+        price: 100,
+        code: 'DEL-02'
     },
     {
         tag: '회의',
         title: 'yoyak',
         desc: '긴 회의의 내용을 효율적으로 요약해줘요!',
-        price: 100
+        price: 100,
+        code: 'YOY-06'
     },
     {
         tag: '업무',
         title: 'toron',
         desc: '토론 시 주제에 기반하는 근거자료들을 찾아줘요!',
-        price: 100
+        price: 100,
+        code: 'TOR-03'
     },
     {
         tag: '업무',
         title: 'dobi',
         desc: '로드맵과 계획 날짜 등을 정리해줘요!',
-        price: 100
+        price: 100,
+        code: 'DOB-05'
     },
     {
         tag: '회의',
         title: 'bigyo',
         desc: '회의의 문제점을 찾아 피드백을 제공해요!',
-        price: 100
+        price: 100,
+        code: 'BIG-01'
     },
 ]
 
@@ -109,7 +115,7 @@ const Main = ({handleAddModel,Id,handleSide}) => {
                     allModelList
                     .filter((item)=>item.tag == category)
                     .map((item)=>(
-                        <li><ModelItem Id={Id} tag={item.tag} title={item.title} desc={item.desc} price={item.price} handleAddModel={handleAddModel}/></li>
+                        <li><ModelItem Id={Id} tag={item.tag} title={item.title} desc={item.desc} price={item.price} code={code} handleAddModel={handleAddModel}/></li>
                     ))
                 }
             </ul>

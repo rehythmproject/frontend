@@ -10,7 +10,7 @@ const TotalAmount = ({totalPrice}) => {
   const salePrice = totalPrice * 0.00;
   const [selectedMethod, setSelectedMethod] = useState('toss');
 
-  // const totalData = Server.get(`/api/cart/${userId}/total`)
+  // const totalData = Server.get(`/api/cart/add/total`)
   //                   .then((res) => {
   //                     console.log(res.data);
   //                   })

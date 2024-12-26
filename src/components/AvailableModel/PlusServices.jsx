@@ -5,7 +5,7 @@ import Server from "../../utils/API";
 
 
 const PlusServices = ({keepModel, handleDeleteModel}) => {
-  // const modelData = Server.get(`/api/cart/${userId}`)
+  // const modelData = Server.get(`/api/cart/add`)
   //                 .then((res)=>{
   //                   console.log(res.data);
   //                 })

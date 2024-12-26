@@ -1,14 +1,15 @@
 import { useRef } from 'react'
 import './ModelItem.css'
 
-const ModelItem = ({Id, tag, title, desc, price, handleAddModel}) => {
+const ModelItem = ({Id, tag, title, desc, price, code, handleAddModel}) => {
     
     const data = {
         id: Id.current,
         tag: tag,
         title: title,
         desc: desc,
-        price: price
+        price: price,
+        code: code
     }
 
     const onclickPlus = () => {
