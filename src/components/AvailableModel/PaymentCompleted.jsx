@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Server from '../../utils/API';
 import './PaymentCompleted.css';
 
 const PaymentCompleted = ({ totalPrice, onRetry, closePaymentCompleted, selectedMethod }) => {
-  const [paymentStatus, setPaymentStatus] = useState('success'); // failure or success
+  const [paymentStatus, setPaymentStatus] = useState(null); // failure or success
   const navigate = useNavigate();
 
   const getNowdate = () => {
@@ -12,11 +13,34 @@ const PaymentCompleted = ({ totalPrice, onRetry, closePaymentCompleted, selected
   };
 
   useEffect(() => {
-    document.body.style.overflow = 'hidden';
+    // document.body.style.overflow = 'hidden';
+    const handlePaymentApproval = async () => {
+    const urlParams = new URLSearchParams(window.location.search) //url에서 pg_token 추출
+    const pgToken = urlParams.get('pg_token')
 
-    return () => {
-      document.body.style.overflow = 'auto';
-    };
+    if(!pgToken) {
+      setPaymentStatus('failure')
+      return
+    }
+
+    // return () => {
+    //   document.body.style.overflow = 'auto';
+    // };
+    try {
+      const response = await Server.get(`/order/pay/completed?pg_token=${pgToken}`)
+
+      if(response.status === 200) {
+        setPaymentStatus('success')
+      } else {
+        setPaymentStatus('failure')
+      }
+    } catch (error) {
+      console.error('결제 승인 중 오류', error);
+      setPaymentStatus('failure')
+    }
+  }
+    
+    handlePaymentApproval()
   }, []);
 
   const handlePaymentCompletedClick = () => {
@@ -79,7 +103,9 @@ const PaymentCompleted = ({ totalPrice, onRetry, closePaymentCompleted, selected
           <button className="retry-button" onClick={handleExecutionPage}>바로 실행하기</button>
           <button className="close-button" onClick={handlePaymentCompletedClick}>닫기</button>
         </div>
-      ) : null}
+      ) : (
+        <div className='loading'></div>
+      )}
     </div>
   );
 };

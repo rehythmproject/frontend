@@ -1,7 +1,7 @@
 .SideViewRecords {
   margin-top: 76px;
   width: 360px;
-  height: 800px;
+  height: 652px;
   position: fixed; 
   z-index: 1;
   right: 0;
@@ -12,6 +12,10 @@
 .sideViewRecords_container {
   margin-left: 1rem;
   margin-right: 1rem;
+  display: flex; 
+  flex-direction: column; 
+  justify-content: space-between; 
+  height: 640px; 
 }
 
 .sideViewRecords_container h4 {
@@ -24,8 +28,14 @@
 
 .div_line {
   border: 1px solid rgba(0, 0, 0, 0.1);
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.checkbox_list {
+  max-height: 476px; 
+  overflow-y: auto; 
+  flex-grow: 1; 
 }
 
 .checkbox-container {
@@ -35,12 +45,6 @@
   margin-bottom: 15px;
   font-weight: bold;
 }
-
-/* .checkbox-container input[type="checkbox"] {
-  width: 20px; 
-  height: 20px; 
-  margin-right: 12px; 
-} */
 
 .checkbox-container input[type="checkbox"] {
   display: none;   
@@ -95,6 +99,8 @@
   padding: 0.8rem;
   cursor: pointer;
   width: 100%;
+  position: sticky; 
+  bottom: 30px; 
 }
 
 .memo_save_button img {
@@ -102,7 +108,7 @@
 }
 
 @media (max-width:1250px) {
-  .SideViewRecords{
+  .SideViewRecords {
       display: none;
   }
 }

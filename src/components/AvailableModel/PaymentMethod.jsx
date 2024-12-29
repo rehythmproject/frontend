@@ -1,17 +1,35 @@
 import React, { useState } from 'react';
 import './PaymentMethod.css';
-import QRCode from './QRCode';
+import QRCodeComponent from './QRCodeComponent ';
+import Server from '../../utils/API';
 
 const PaymentMethod = ({ totalPrice, closePayment, setIsPaymentCompleted, selectedMethod , setSelectedMethod}) => {
+  const [qrUrl, setQrUrl] = useState(null);
+
+  // 결제 준비 api 호출
+  const handlePaymentClick = async () => {
+    try {
+      const response = await Server.post('/order/pay/ready', {
+        name: 'barum',       // 상품 이름
+        totalPrice: totalPrice, // 결제 금액
+      });
+      if (response.status === 200) {
+        const data = response.data;
+        setQrUrl(data.next_redirect_pc_url); // QR 코드 URL
+        console.log('결제 준비 성공:', data);
+      } else {
+        alert('결제 준비에 실패했습니다.');
+      }
+    } catch (error) {
+      console.error('결제 준비 중 오류:', error.response || error.message);
+      alert('결제 준비 중 오류가 발생했습니다.');
+    }
+  };
+  
 
   const handleClick = (method) => {
     setSelectedMethod(method);
-  };
-
-  const handlePaymentClick = () => {
-    setIsPaymentCompleted(true); 
-    closePayment(); 
-  };
+  }
 
   return (
     <div className="paymentMethod">
@@ -51,9 +69,17 @@ const PaymentMethod = ({ totalPrice, closePayment, setIsPaymentCompleted, select
       )}
       {selectedMethod === 'kakao' && (
         <div className="kakaoPayContent">
-          <h4>Input Amount</h4>
-          <QRCode />
-          <button className="kakao-submit-button" onClick={handlePaymentClick}>결제하기</button>
+          {qrUrl ? (
+            <QRCodeComponent qrUrl={qrUrl}/> //동적 qr 코드 생성
+          ) : (
+            <div>
+            <p className="transaction-text">Waiting for transaction confirmation</p>
+            <div className="loading_spinner_box" style={{marginTop:'60px'}}>
+                <div className="loading_spinner" />
+            </div>
+            <button className="kakao-submit-button" onClick={handlePaymentClick}>결제하기</button>
+            </div>
+          )}         
         </div>
       )}
     </div>
