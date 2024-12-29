@@ -10,7 +10,7 @@ const AvailableModel = () => {
   const [keepModel, setKeepModel] = useState([]);
   const  [totalPrice, setTotalPrice] = useState(0);
   const [sideView, setSideView] = useState('none');
-
+  const [modelRefresh, setModelRefresh] = useState(0);
   const handleSide = () => {
     if(sideView == 'view'){
       setSideView('none');
@@ -34,19 +34,20 @@ const AvailableModel = () => {
           }
         })
     .then((res) => {
-      console.log(res.data);
+      console.log('add:',res.data);
+      setModelRefresh(prev => prev + 1);
     })
     .catch((err) => {
-      console.log(err.response.data);
+      console.log('add:',err.response.data);
     })
   }
 
   const handleDeleteModel = (deleteIndex) => {
-    const minusPrice = keepModel.filter((item) => item.id === deleteIndex);
-    setKeepModel((prev)=>prev.filter((item) => item.id !== deleteIndex));
-    setTotalPrice((prev)=>prev-=minusPrice[0].price);
+    // const minusPrice = keepModel.filter((item) => item.id === deleteIndex);
+    // setKeepModel((prev)=>prev.filter((item) => item.id !== deleteIndex));
+    // setTotalPrice((prev)=>prev-=minusPrice[0].price);
 
-    const tag = minusPrice[0].code // 변환 결과를 modelId에 저장
+    const tag = deleteIndex // 변환 결과를 modelId에 저장
 
 
     Server.delete(`cart/add/remove/${tag}`, {
@@ -55,10 +56,11 @@ const AvailableModel = () => {
            }
         })
     .then((res) => {
-      console.log(res.data);
+      console.log('delete:',res.data);
+      setModelRefresh(prev => prev + 1);
     })
     .catch((err) => {
-      console.log(err.response.data);
+      console.log('delete:',err.response.data);
     })
   }
 
@@ -67,7 +69,7 @@ const AvailableModel = () => {
       <Header/>
       <div className='avail_compo_container'>
         <Main handleAddModel={handleAddModel} Id={Id} handleSide={handleSide}/>
-        <Side keepModel={keepModel} totalPrice={totalPrice} handleDeleteModel={handleDeleteModel}Id={Id} sideView={sideView}/>
+        <Side keepModel={keepModel} totalPrice={totalPrice} handleDeleteModel={handleDeleteModel}Id={Id} sideView={sideView} modelRefresh={modelRefresh}/>
       </div>
     </div>
   );

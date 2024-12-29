@@ -6,7 +6,7 @@ import PlusServices from "./PlusServices";
 import TotalAmount from "./TotalAmount";
 
 
-const Side = ({keepModel,totalPrice,handleDeleteModel,sideView}) => {
+const Side = ({modelRefresh, keepModel,totalPrice,handleDeleteModel,sideView}) => {
   const [changeButton, setChangeButton] = useState("정보추가");
   return (
     <div className={`appdiv ${sideView}`}>
@@ -14,8 +14,8 @@ const Side = ({keepModel,totalPrice,handleDeleteModel,sideView}) => {
       {changeButton === "정보추가" ? (
         <>
           <PlusInformation />
-          <PlusServices keepModel={keepModel} handleDeleteModel={handleDeleteModel}/>
-          <TotalAmount totalPrice={totalPrice}/>
+          <PlusServices keepModel={keepModel} handleDeleteModel={handleDeleteModel} modelRefresh={modelRefresh}/>
+          <TotalAmount totalPrice={totalPrice} modelRefresh={modelRefresh}/>
         </>
       ) : (
         <div className="info-confirmation">

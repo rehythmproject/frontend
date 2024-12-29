@@ -4,24 +4,34 @@ import PaymentMethod from './PaymentMethod';
 import PaymentCompleted from './PaymentCompleted';
 import Server from '../../utils/API';
 
-const TotalAmount = ({totalPrice}) => {
+const TotalAmount = ({modelRefresh}) => {
   const [orderPayment, setOrderPayment] = useState(false);
   const [isPaymentCompleted, setIsPaymentCompleted] = useState(false);
   const [selectedMethod, setSelectedMethod] = useState('toss');
+  const [totalPrice, setTotalPrice] = useState(0);
+  const [salePrice, setSalePrice] = useState(0);
   
-  const totalData = Server.get(`/cart/add/total`, {
-    headers: {
-      'Content-Type': 'application/json' // JSON 형식 명시
-    }
-  })
-  .then((res) => {
-    console.log(res.data);
-  })
-  .catch((err) => {
-    console.log(err.response.data);
-  })
-  
-  const salePrice = totalData * 0.00;
+  useEffect(() => {
+    const totalData = async () => {
+      Server.get(`/cart/add/total`, {
+          headers: {
+            'Content-Type': 'application/json', // JSON 형식 명시
+          },
+        })
+        .then((response) => {
+          console.log('Total Data:', response.data);
+          setTotalPrice(response.data); // 데이터 상태 설정
+          setSalePrice(response.data * 0.00); // 할인률 계산 (현재 0%)
+        })
+        
+      .catch ((error) => {
+        console.error('total:Error fetching total data:', error.response?.data || error.message);
+      })
+    };
+
+    totalData();
+  }, [modelRefresh]);
+
   useEffect(() => {
     if (orderPayment) {
       document.body.style.overflow = 'hidden'; 
@@ -36,7 +46,7 @@ const TotalAmount = ({totalPrice}) => {
 
   const openPayment = () => {
     setSelectedMethod('toss');
-    if(totalData == 0){
+    if(totalPrice == 0){
       alert('결제할 모델을 선택해주세요.');
       return;
     }
@@ -64,7 +74,7 @@ const TotalAmount = ({totalPrice}) => {
         <div className='alltotal-div'>
           <div className='amount-div'>
             <li className='total-label'>총금액</li>
-            <li className='total-amount'>₩{totalData}</li>
+            <li className='total-amount'>₩{totalPrice}</li>
           </div>
           <div className='amount-div'>
             <li className='total-label'>할인률(0%)</li>
@@ -73,7 +83,7 @@ const TotalAmount = ({totalPrice}) => {
           <hr className='total-hr'/>
           <div className='total-div'>
             <li className='total'>Total</li>
-            <li className='totalmoney'>₩{totalData-salePrice}</li>
+            <li className='totalmoney'>₩{totalPrice-salePrice}</li>
           </div>
           <button className='start-button' onClick={openPayment}>start !</button>
         </div>
@@ -92,7 +102,7 @@ const TotalAmount = ({totalPrice}) => {
             <div className='payment-information'>
               <div className='payment-content-main-money'>
                 <div className='payment-content-text-money'>Subtotal</div>
-                <div className='payment-content-money'>₩{totalData}</div>
+                <div className='payment-content-money'>₩{totalPrice}</div>
               </div>
               <div className='payment-content-main-money'>
                 <div className='payment-content-text-money'>Tax (0%)</div>
@@ -100,11 +110,11 @@ const TotalAmount = ({totalPrice}) => {
               </div>
               <div className='payment-content-main-money'>
                 <div className='payment-content-text-money2'>Total</div>
-                <div className='payment-content-money2'>₩{totalData-salePrice}</div>
+                <div className='payment-content-money2'>₩{totalPrice-salePrice}</div>
               </div>
             </div>
             <PaymentMethod 
-              totalPrice={totalData}
+              totalPrice={totalPrice}
               closePayment={closePayment} 
               setIsPaymentCompleted={setIsPaymentCompleted}
               selectedMethod={selectedMethod} 
@@ -116,7 +126,7 @@ const TotalAmount = ({totalPrice}) => {
 
     {isPaymentCompleted && 
       <PaymentCompleted 
-        totalPrice={totalData}
+        totalPrice={totalPrice}
         onRetry={handleRetryPayment}
         closePaymentCompleted={closePaymentCompleted} 
         selectedMethod={selectedMethod}
