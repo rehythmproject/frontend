@@ -115,7 +115,7 @@ const Main = ({handleAddModel,Id,handleSide}) => {
                     allModelList
                     .filter((item)=>item.tag == category)
                     .map((item)=>(
-                        <li><ModelItem Id={Id} tag={item.tag} title={item.title} desc={item.desc} price={item.price} code={code} handleAddModel={handleAddModel}/></li>
+                        <li><ModelItem Id={Id} tag={item.tag} title={item.title} desc={item.desc} price={item.price} code={item.code} handleAddModel={handleAddModel}/></li>
                     ))
                 }
             </ul>
