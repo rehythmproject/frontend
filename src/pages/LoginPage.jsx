@@ -34,7 +34,7 @@ const LoginPage = () => {
       })
       .then((res) => {
         console.log(res.data);
-        alert(res.data);
+        alert('로그인 성공');
         navigate('/availableModel');
       })
       .catch((error) => {
