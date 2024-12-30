@@ -1,9 +1,19 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './MainUsageListContentsPage.css';
 import { BeatLoader } from 'react-spinners';
 
 const MainUsageListContentsPage = () => {
   const [dataState, setDataState] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setDataState(true);
+    }, 2000); // 2초 후에 실행
+
+    // 컴포넌트가 언마운트될 때 타이머 정리
+    return () => clearTimeout(timer);
+  }, []);
+
   
   return (
     <div className='MainUsageListContentsPage'>
