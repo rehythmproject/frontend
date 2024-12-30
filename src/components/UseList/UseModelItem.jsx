@@ -3,7 +3,7 @@ import RecordButtons from "./RecordButtons";
 
 
 
-const UseModelItem = ({item}) => {
+const UseModelItem = ({item, title}) => {
 
     const tag_styles = {
         공부: {backgroundColor: '#E6F8EF', color: '#01703C'},
@@ -29,7 +29,7 @@ const UseModelItem = ({item}) => {
                 <p>총 금액</p>
                 <p className='price'>₩{item.total}.00</p>
             </div>
-            <RecordButtons code={item.code}/>
+            <RecordButtons code={item.code} title={title}/>
         </div>
     )
 }

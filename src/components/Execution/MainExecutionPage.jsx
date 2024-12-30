@@ -1,11 +1,14 @@
 import './MainExecutionPage.css'
 import React, { useState } from 'react';
 import AudioAnalyser from 'react-audio-analyser';
+import { useNavigate } from 'react-router-dom';
 
 const MainExecutionPage = () => {
+  const navigate = useNavigate();
   const [status, setStatus] = useState('inactive');
   const [voiceStart, setVoiceStart] = useState(true)
   const [voiceEnd, setVoiceEnd] = useState(true)
+
 
   const controlAudio = (status) => setStatus(status);
 
@@ -28,6 +31,7 @@ const MainExecutionPage = () => {
     if (userConfirmed) {
       controlAudio('paused')
       setVoiceEnd(false)
+      navigate('/useModelPage/ViewRecords/1235')
 
     } else {
       controlAudio('recording')

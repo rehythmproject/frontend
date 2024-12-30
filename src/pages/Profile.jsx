@@ -20,7 +20,7 @@ const useModelChart = [
     },
     {
       "name": "공부",
-      "value": 300,
+      "value": 50,
       "fill": "#DCA4FF"
     },
   ];
@@ -62,33 +62,33 @@ const Profile = () => {
                                 <img className='use_model_img' src="/images/delLa.png" alt='model_img'/>
                                 <div className="info">
                                     <p className='title'>delLa</p>
-                                    <p className='order'>Order: <span>5</span></p>
+                                    <p className='order'>Order: <span>6</span></p>
                                 </div>
-                                <p className="ratio">27.5%</p>
+                                <p className="ratio">51.6%</p>
                             </tr>
                             <tr className='use_model_item n'>
                                 <img className='use_model_img' src="/images/delLa.png" alt='model_img'/>
                                 <div className="info">
-                                    <p className='title'>delLa</p>
+                                    <p className='title'>barum</p>
                                     <p className='order'>Order: <span>5</span></p>
                                 </div>
-                                <p className="ratio">27.5%</p>
+                                <p className="ratio">49.5%</p>
                             </tr>
                             <tr className='use_model_item n'>
                                 <img className='use_model_img' src="/images/delLa.png" alt='model_img'/>
                                 <div className="info">
-                                    <p className='title'>delLa</p>
-                                    <p className='order'>Order: <span>5</span></p>
+                                    <p className='title'>dobi</p>
+                                    <p className='order'>Order: <span>3</span></p>
                                 </div>
-                                <p className="ratio">27.5%</p>
+                                <p className="ratio">23.7%</p>
                             </tr>  
                             <tr className='use_model_item'>
                                 <img className='use_model_img' src="/images/delLa.png" alt='model_img'/>
                                 <div className="info">
-                                    <p className='title'>delLa</p>
-                                    <p className='order'>Order: <span>5</span></p>
+                                    <p className='title'>yoyak</p>
+                                    <p className='order'>Order: <span>1</span></p>
                                 </div>
-                                <p className="ratio">27.5%</p>
+                                <p className="ratio">17.2%</p>
                             </tr>
                       </table>
                     </div>

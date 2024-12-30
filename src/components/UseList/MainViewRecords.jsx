@@ -3,9 +3,29 @@ import { useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import './MainViewRecords.css';
 
+const useModelList = [
+  {
+      title: '몬드리안 회사와 미팅',
+      code: '1234',
+  },
+  {
+      title: '새 프로젝트 진행 회의',
+      code: '1235',
+  },
+  {
+      title: '내 개인 발음교정',
+      code: '3553',
+  },
+  {
+      title: '기후변화 토론 정리',
+      code: '1253'
+  }
+]
+
 const MainViewRecords = () => {
   const navigate = useNavigate();
   const { code } = useParams(); 
+  
 
   const records = [
     { modelName: 'deLLa', time: '15 May 2022', status: '프로젝트 관련' },
@@ -89,7 +109,11 @@ const MainViewRecords = () => {
   return (
     <div className='mainViewRecords'>
       <div className='mainViewRecords_title'>
-        <h3>몬드리안 회사와 미팅</h3>
+        {
+          useModelList
+          .filter((item) => (item.code.includes(code)))
+          .map((item) => (<h3>{item.title}</h3>))
+          }
         <div>사용한 모델기록</div>
       </div>
 

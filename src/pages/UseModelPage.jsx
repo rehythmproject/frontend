@@ -57,7 +57,7 @@ const UseModelPage = () => {
                             useModelList
                                 .filter((item) => (item.title.includes(searchBox) && item.date.includes(searchDate)))
                                 .map((item) => (
-                                <li key={item.code}><UseModelItem item={item} /></li>
+                                <li key={item.code}><UseModelItem item={item} title={item.title} /></li>
                                 ))
                             }
                         </ul>
