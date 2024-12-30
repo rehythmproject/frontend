@@ -26,7 +26,7 @@ const LoginPage = () => {
     const sendData = async () => {
       Server.post('/auth/login', {
         email: email,
-        ConfirmPassword: pwd
+        password: pwd
       }, {
         headers: {
           'Content-Type': 'application/json' // JSON 형식 명시
