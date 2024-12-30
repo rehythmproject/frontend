@@ -40,7 +40,7 @@ function SignupPage() {
       username: signData.usernm,
       email: signData.email,
       password: signData.pwd,
-      ConfirmPassword: signData.rpwd,
+      confirmPassword: signData.rpwd,
       phone: signData.phone,
     }, {
       headers: {
@@ -49,9 +49,12 @@ function SignupPage() {
     })
     .then((res) => {
       console.log(res.data);
+      alert('회원가입이 완료되었습니다.');
+      navigate('/auth/login');
     })
     .catch((err) => {
       console.error(err.response.data);
+      alert('회원가입 중 오류가 발생했습니다.');
     });   
   }
 
