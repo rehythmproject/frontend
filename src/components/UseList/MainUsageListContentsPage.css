@@ -143,9 +143,8 @@
   background: #F3E8FF;  
 }
 
-/* 페이지네이션 스타일 */
-/* .MainUsageListContentsPage .content_pageMove {
-  display: flex;
-  background-color: #fff;
-  border-top: #E6E7EA 2px solid;
-} */
+@media (max-width:1150px) {
+  .MainUsageListContentsPage_title div{
+      display: none;
+  }
+}

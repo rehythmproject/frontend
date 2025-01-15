@@ -12,7 +12,7 @@ const SideExecutionPage = () => {
           <div className='sideExecution_line'></div>
           <div>
             <button className='sideExecution_button'>
-              <img src="/images/메모저장.png" alt="메모저장" /> 메모저장
+              <img src="/images/메모저장.png" alt="메모저장" /> 회의 끝내기
             </button>
           </div>
         </div>
